@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/CC107_E2019/Group7/Notifications/app/src/main/res/drawable/ic_launcher_background.xml" value="0.28489583333333335" />
+        <entry key="..\:/CC107_E2019/Group7/Notifications/app/src/main/res/layout/activity_main.xml" value="0.26875" />
+        <entry key="..\:/CC107_E2019/Group7/Notifications/bigpicture/src/main/res/drawable/ic_notification.xml" value="0.28489583333333335" />
+        <entry key="..\:/CC107_E2019/Group7/Notifications/bigpicture/src/main/res/layout/activity_main.xml" value="0.2546875" />
+        <entry key="..\:/CC107_E2019/Group7/Notifications/bigtext/src/main/res/layout/activity_main.xml" value="0.2546875" />
+        <entry key="..\:/CC107_E2019/Group7/Notifications/inbox_style/src/main/res/drawable/ic_notification.xml" value="0.28489583333333335" />
+        <entry key="..\:/CC107_E2019/Group7/Notifications/inbox_style/src/main/res/drawable/notification_icon.xml" value="0.28489583333333335" />
+        <entry key="..\:/CC107_E2019/Group7/Notifications/inbox_style/src/main/res/layout/activity_main.xml" value="0.26875" />
+        <entry key="..\:/CC107_E2019/Group7/Notifications/notifications/src/main/res/drawable/ic_launcher_background.xml" value="0.28489583333333335" />
+        <entry key="..\:/CC107_E2019/Group7/Notifications/notifications/src/main/res/layout/activity_big_picture.xml" value="0.26875" />
+        <entry key="..\:/CC107_E2019/Group7/Notifications/notifications/src/main/res/layout/activity_big_text.xml" value="0.26875" />
+        <entry key="..\:/CC107_E2019/Group7/Notifications/notifications/src/main/res/layout/activity_inbox_style.xml" value="0.26875" />
+        <entry key="..\:/CC107_E2019/Group7/Notifications/notifications/src/main/res/layout/activity_main.xml" value="0.2546875" />
+        <entry key="..\:/CC107_E2019/Group7/Notifications/notifications/src/main/res/layout/activity_simple_notif.xml" value="0.26875" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

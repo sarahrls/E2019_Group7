@@ -11,8 +11,10 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/context_menu" />
-            <option value="$PROJECT_DIR$/popup_menu" />
+            <option value="$PROJECT_DIR$/bigpicture" />
+            <option value="$PROJECT_DIR$/bigtext" />
+            <option value="$PROJECT_DIR$/inbox_style" />
+            <option value="$PROJECT_DIR$/notifications" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
