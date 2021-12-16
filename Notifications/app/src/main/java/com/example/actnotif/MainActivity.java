@@ -22,8 +22,8 @@ public class MainActivity extends AppCompatActivity {
                 NotificationCompat.Builder mBuilder
                         = new NotificationCompat.Builder(MainActivity.this)
                         .setSmallIcon(R.drawable.ic_baseline_notifications_24)
-                        .setContentTitle("Tutlane Send New Message")
-                                        .setContentText("Hi, Welcome to tutlane tutorial site");
+                        .setContentTitle("Group7 from BSCS_E2019 Send New Message")
+                                        .setContentText("Hi, Welcome to Group7 tutorial site");
 // Set the intent to fire when the user taps on notification.
                 Intent resultIntent = new Intent(MainActivity.this, MainActivity.class);
                 PendingIntent pendingIntent =

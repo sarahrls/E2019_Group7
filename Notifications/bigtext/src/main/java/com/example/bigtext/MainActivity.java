@@ -27,8 +27,8 @@ public class MainActivity extends AppCompatActivity {
 //Assign BigText style notification
                 NotificationCompat.BigTextStyle bigText
                         = new NotificationCompat.BigTextStyle();
-                bigText.bigText("Welcome to tutlane, it provides a tutorials related to all technologies in software industry. Here we covered complete tutorials from basic to adavanced topics from all technologies");
-                        bigText.setSummaryText("By: Tutlane");
+                bigText.bigText("Welcome to BSCS E2019,this provides about the activity in android studio and this activity is custom big text notification");
+                        bigText.setSummaryText("By: GROUP 7");
                 NotificationCompat.Builder mBuilder
                         = new NotificationCompat.Builder(MainActivity.this)
                         .setSmallIcon(R.drawable.ic_notification)
