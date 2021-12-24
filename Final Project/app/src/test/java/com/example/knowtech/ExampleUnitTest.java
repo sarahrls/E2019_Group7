@@ -1,4 +1,4 @@
-package com.example.virtual_study;
+package com.example.knowtech;
 
 import org.junit.Test;
 

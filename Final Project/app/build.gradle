@@ -6,7 +6,7 @@ android {
     compileSdk 31
 
     defaultConfig {
-        applicationId "com.example.virtual_study"
+        applicationId "com.example.knowtech"
         minSdk 21
         targetSdk 31
         versionCode 1
