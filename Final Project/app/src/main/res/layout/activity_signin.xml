@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/signin"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#D90B0A0A">
@@ -21,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/Username"
+        android:id="@+id/signin_username"
         android:layout_width="306dp"
         android:layout_height="65dp"
         android:layout_marginTop="224dp"
@@ -36,7 +37,7 @@
         app:layout_constraintTop_toBottomOf="@+id/signin_title" />
 
     <EditText
-        android:id="@+id/editTextTextPassword2"
+        android:id="@+id/signin_password"
         android:layout_width="307dp"
         android:layout_height="64dp"
         android:ems="10"
@@ -46,22 +47,23 @@
         android:textColorHighlight="#F6F1F1"
         android:textColorHint="@color/white"
         android:textColorLink="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/btn_signin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Username"
+        app:layout_constraintTop_toBottomOf="@+id/signin_username"
         app:layout_constraintVertical_bias="0.145" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_signin"
         android:layout_width="196dp"
         android:layout_height="60dp"
+        android:background="#3E065F"
         android:text="Sign in"
-        app:cornerRadius="15dp"
+        app:cornerRadius="14dp"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2" />
+        app:layout_constraintTop_toBottomOf="@+id/signin_password" />
 
     <TextView
         android:id="@+id/textView2"
@@ -70,25 +72,26 @@
         android:layout_marginBottom="124dp"
         android:text="Don't you have an account? "
         android:textColor="#9A8D8D"
-        android:textSize="15sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.277"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="84dp"
-        android:layout_height="23dp"
-        android:layout_marginBottom="120dp"
+        android:id="@+id/reg_signup"
+        android:layout_width="91dp"
+        android:layout_height="48dp"
         android:clickable="true"
         android:fontFamily="@font/noto_sans_bold"
         android:text="Sign up"
         android:textColor="#FFFFFF"
-        android:textSize="15sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.755"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_signin"
+        app:layout_constraintVertical_bias="0.049" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
