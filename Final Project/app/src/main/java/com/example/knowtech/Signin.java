@@ -16,7 +16,6 @@ public class Signin extends AppCompatActivity {
 
         Button signin;
         EditText signin_username, signin_password;
-        TextView reg_signup;
 
         signin_username = (EditText) findViewById(R.id.signin_username);
         signin_password = (EditText) findViewById(R.id.signin_password);
