@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KnowTech">
         <activity
+            android:name=".Homepage"
+            android:exported="false" />
+        <activity
             android:name=".customize_profile"
             android:exported="false" />
         <activity
