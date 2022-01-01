@@ -83,18 +83,20 @@
 
     <TextView
         android:id="@+id/reg_signup"
-        android:layout_width="91dp"
-        android:layout_height="48dp"
+        android:layout_width="83dp"
+        android:layout_height="25dp"
         android:clickable="true"
+        android:cursorVisible="true"
         android:fontFamily="@font/noto_sans_bold"
+        android:linksClickable="false"
         android:text="Sign up"
         android:textColor="#2B2727"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintHorizontal_bias="0.78"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_signin"
-        app:layout_constraintVertical_bias="0.049" />
+        app:layout_constraintVertical_bias="0.083" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,9 +12,10 @@
         <entry key="..\:/CC107_E2019/Group7/Final Project/app/src/main/res/mipmap-anydpi-v26/icon.xml" value="0.15885416666666666" />
         <entry key="..\:/Users/PC/Documents/CC107/E2019_Group7/Final Project/app/src/main/res/layout/activity_customize_profile.xml" value="0.25" />
         <entry key="..\:/Users/PC/Documents/CC107/E2019_Group7/Final Project/app/src/main/res/layout/activity_get_started.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/PC/Documents/CC107/E2019_Group7/Final Project/app/src/main/res/layout/activity_homepage.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/PC/Documents/CC107/E2019_Group7/Final Project/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/PC/Documents/CC107/E2019_Group7/Final Project/app/src/main/res/layout/activity_signin.xml" value="0.22" />
-        <entry key="..\:/Users/PC/Documents/CC107/E2019_Group7/Final Project/app/src/main/res/layout/activity_signup.xml" value="0.25" />
+        <entry key="..\:/Users/PC/Documents/CC107/E2019_Group7/Final Project/app/src/main/res/layout/activity_signup.xml" value="0.22" />
       </map>
     </option>
   </component>
@@ -23,5 +24,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.22" />
+      </ProjectState>
+    </option>
   </component>
 </project>

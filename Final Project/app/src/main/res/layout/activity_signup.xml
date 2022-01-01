@@ -91,8 +91,8 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="190dp"
-        android:layout_height="20dp"
+        android:layout_width="187dp"
+        android:layout_height="23dp"
         android:layout_marginStart="53dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="64dp"
@@ -106,11 +106,12 @@
 
     <TextView
         android:id="@+id/reg_signin"
-        android:layout_width="93dp"
-        android:layout_height="24dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="84dp"
-        android:layout_marginBottom="60dp"
+        android:layout_width="71dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="98dp"
+        android:layout_marginBottom="63dp"
         android:fontFamily="@font/noto_sans_bold"
         android:text="Sign in"
         android:textColor="#2B2727"
