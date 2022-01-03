@@ -12,14 +12,14 @@ import android.widget.TextView;
 public class Signin extends AppCompatActivity {
 
     TextView textView;
-    Button signin_button;
+    Button login;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signin);
 
-        getSupportActionBar();
+        getSupportActionBar().hide();
 
         TextView textview = findViewById(R.id.reg_signin);
         textview.setOnClickListener(new View.OnClickListener() {
@@ -32,8 +32,8 @@ public class Signin extends AppCompatActivity {
             }
         });
 
-        signin_button = findViewById(R.id.btn_signin);
-        signin_button.setOnClickListener(new View.OnClickListener() {
+        login = findViewById(R.id.btn_signin);
+        login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 

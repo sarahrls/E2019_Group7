@@ -11,7 +11,7 @@ import android.widget.TextView;
 public class Signup extends AppCompatActivity {
 
     TextView textView;
-    Button signup_register;
+    Button register;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,8 +31,8 @@ public class Signup extends AppCompatActivity {
             }
         });
 
-        signup_register = findViewById(R.id.signup_register);
-        signup_register.setOnClickListener(new View.OnClickListener() {
+        register = findViewById(R.id.signup_register);
+        register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Signup.this,Homepage.class);

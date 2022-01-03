@@ -16,6 +16,7 @@
         <entry key="..\:/Users/PC/Documents/CC107/E2019_Group7/Final Project/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/PC/Documents/CC107/E2019_Group7/Final Project/app/src/main/res/layout/activity_signin.xml" value="0.22" />
         <entry key="..\:/Users/PC/Documents/CC107/E2019_Group7/Final Project/app/src/main/res/layout/activity_signup.xml" value="0.22" />
+<<<<<<< Updated upstream
         <entry key="..\:/Users/Sarah Sison/Desktop/E2019_Group7/Final Project/app/src/main/res/layout/activity_get_started.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Sarah Sison/Desktop/E2019_Group7/Final Project/app/src/main/res/layout/activity_homepage.xml" value="0.25" />
         <entry key="..\:/Users/Sarah Sison/Desktop/E2019_Group7/Final Project/app/src/main/res/layout/activity_main.xml" value="0.1" />
@@ -31,6 +32,10 @@
         <entry key="..\:/Users/Sarah Sison/Desktop/E2019_Group7/Final Project/app/src/main/res/layout/fragment_third.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Sarah Sison/Desktop/E2019_Group7/Final Project/app/src/main/res/layout/fragment_third_page.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Sarah Sison/Desktop/E2019_Group7/Final Project/app/src/main/res/menu/bottom_menu.xml" value="0.22" />
+=======
+        <entry key="..\:/Users/PC/Documents/CC107/E2019_Group7/Final Project/app/src/main/res/layout/fragment_first.xml" value="0.2028985507246377" />
+        <entry key="..\:/Users/PC/Documents/CC107/E2019_Group7/Final Project/app/src/main/res/layout/fragment_third.xml" value="0.2028985507246377" />
+>>>>>>> Stashed changes
       </map>
     </option>
   </component>
