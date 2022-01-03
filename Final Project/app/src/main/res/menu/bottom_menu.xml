@@ -2,15 +2,15 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/firstFragment"
+        android:id="@+id/firstPage"
         android:title="Home" android:icon="@drawable/ic_round_home_24"/>
     <item
-        android:id="@+id/secondFragment"
+        android:id="@+id/secondPage"
         android:title="Rooms" android:icon="@drawable/ic_round_dashboard_24"/>
     <item
-        android:id="@+id/thirdFragment"
+        android:id="@+id/thirdPage"
         android:title="Saved" android:icon="@drawable/ic_round_bookmarks_24"/>
     <item
-        android:id="@+id/lastFragment"
+        android:id="@+id/fourthPage"
         android:title="Notifications" android:icon="@drawable/ic_round_notifications_24"/>
 </menu>
