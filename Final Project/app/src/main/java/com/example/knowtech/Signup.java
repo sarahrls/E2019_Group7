@@ -10,8 +10,6 @@ import android.widget.TextView;
 
 public class Signup extends AppCompatActivity {
 
-    TextView textView;
-    Button register;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,18 +18,18 @@ public class Signup extends AppCompatActivity {
 
         getSupportActionBar();
 
-        TextView textView = findViewById(R.id.reg_signup);
-        textView.setOnClickListener(new View.OnClickListener() {
+        TextView reg_register = (TextView) findViewById(R.id.reg_signin);
+        reg_register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Signup.this,Signin.class);
-                startActivity(intent);
+                Intent text = new Intent(Signup.this,Signin.class);
+                startActivity(text);
 
                 finish();
             }
         });
 
-        register = findViewById(R.id.signup_register);
+        Button register = (Button) findViewById(R.id.btn_register);
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

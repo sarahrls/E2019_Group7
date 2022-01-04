@@ -58,7 +58,7 @@
         app:layout_constraintVertical_bias="0.068" />
 
     <Button
-        android:id="@+id/signup_register"
+        android:id="@+id/btn_register"
         android:layout_width="242dp"
         android:layout_height="64dp"
         android:layout_marginBottom="92dp"
@@ -82,12 +82,12 @@
         android:hint="Confirm Password"
         android:inputType="textPassword"
         android:textColorHint="#2B2727"
-        app:layout_constraintBottom_toTopOf="@+id/signup_register"
+        app:layout_constraintBottom_toTopOf="@+id/btn_register"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signup_password2"
-        app:layout_constraintVertical_bias="0.407" />
+        app:layout_constraintVertical_bias="0.296" />
 
     <TextView
         android:id="@+id/textView3"
@@ -102,7 +102,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/reg_signin"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signup_register" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_register" />
 
     <TextView
         android:id="@+id/reg_signin"
@@ -119,6 +119,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/signup_register" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_register" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

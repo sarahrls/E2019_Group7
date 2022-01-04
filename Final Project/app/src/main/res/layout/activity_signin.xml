@@ -10,12 +10,14 @@
     <TextView
         android:id="@+id/signin_title"
         android:layout_width="202dp"
-        android:layout_height="33dp"
+        android:layout_height="0dp"
         android:layout_marginTop="124dp"
+        android:layout_marginBottom="288dp"
         android:fontFamily="@font/noto_sans_bold"
         android:text="Welcome Back!"
         android:textColor="#2B2727"
         android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/signin_password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.215"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,7 +27,7 @@
         android:id="@+id/signin_username"
         android:layout_width="306dp"
         android:layout_height="65dp"
-        android:layout_marginTop="208dp"
+        android:layout_marginTop="196dp"
         android:background="#99C5C0C0"
         android:foregroundTint="#FFFFFF"
         android:inputType="textPersonName"
@@ -34,14 +36,17 @@
         android:textColor="#2B2727"
         android:textColorHint="#2B2727"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signin_title" />
 
     <EditText
         android:id="@+id/signin_password"
-        android:layout_width="307dp"
-        android:layout_height="64dp"
+        android:layout_width="318dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginEnd="51dp"
+        android:layout_marginBottom="14dp"
         android:background="#99C5C0C0"
         android:ems="10"
         android:hint="Password"
@@ -53,18 +58,19 @@
         app:layout_constraintBottom_toTopOf="@+id/btn_signin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signin_username"
-        app:layout_constraintVertical_bias="0.145" />
+        app:layout_constraintTop_toBottomOf="@+id/signin_title" />
 
     <Button
         android:id="@+id/btn_signin"
         android:layout_width="196dp"
-        android:layout_height="60dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="148dp"
         android:background="#3E065F"
         android:text="Sign in"
         app:cornerRadius="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signin_password" />
 
@@ -72,19 +78,22 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="124dp"
+        android:layout_marginBottom="112dp"
         android:text="Don't you have an account? "
         android:textColor="#2B2727"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.277"
+        app:layout_constraintHorizontal_bias="0.279"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/reg_signup"
-        android:layout_width="83dp"
-        android:layout_height="25dp"
+        android:layout_width="85dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginBottom="108dp"
         android:clickable="true"
         android:cursorVisible="true"
         android:fontFamily="@font/noto_sans_bold"
@@ -94,9 +103,9 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.78"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/btn_signin"
-        app:layout_constraintVertical_bias="0.083" />
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

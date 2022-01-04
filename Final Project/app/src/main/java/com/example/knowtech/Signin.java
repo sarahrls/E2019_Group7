@@ -11,8 +11,6 @@ import android.widget.TextView;
 
 public class Signin extends AppCompatActivity {
 
-    TextView textView;
-    Button login;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,8 +19,8 @@ public class Signin extends AppCompatActivity {
 
         getSupportActionBar().hide();
 
-        TextView textview = findViewById(R.id.reg_signin);
-        textview.setOnClickListener(new View.OnClickListener() {
+        TextView reg_signup = (TextView) findViewById(R.id.reg_signup);
+        reg_signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Signin.this,Signup.class);
@@ -32,11 +30,10 @@ public class Signin extends AppCompatActivity {
             }
         });
 
-        login = findViewById(R.id.btn_signin);
-        login.setOnClickListener(new View.OnClickListener() {
+        Button signin = (Button) findViewById(R.id.btn_signin);
+        signin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 Intent int1 = new Intent(Signin.this,Homepage.class);
                 startActivity(int1);
 
