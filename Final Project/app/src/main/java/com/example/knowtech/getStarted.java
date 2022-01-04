@@ -13,7 +13,7 @@ public class getStarted extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_get_started);
-
+        getSupportActionBar().hide();
         Button btn_getStarted = (Button) findViewById(R.id.btn_getStarted);
 
         btn_getStarted.setOnClickListener(new View.OnClickListener() {

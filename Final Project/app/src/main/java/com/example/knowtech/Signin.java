@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 public class Signin extends AppCompatActivity {
 
+    Button homepage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,8 +31,8 @@ public class Signin extends AppCompatActivity {
             }
         });
 
-        Button signin = (Button) findViewById(R.id.btn_signin);
-        signin.setOnClickListener(new View.OnClickListener() {
+        Button homepage = (Button) findViewById(R.id.btn_signin);
+        homepage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent int1 = new Intent(Signin.this,Homepage.class);

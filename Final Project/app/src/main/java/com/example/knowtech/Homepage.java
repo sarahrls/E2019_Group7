@@ -15,9 +15,9 @@ public class Homepage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage);
-
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView2);
-        NavController navController = Navigation.findNavController(this, R.id.fragmentContainerView4);
+        getSupportActionBar().hide();
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        NavController navController = Navigation.findNavController(this, R.id.fragmentContainerView);
         NavigationUI.setupWithNavController(bottomNavigationView, navController);
 
 

@@ -15,8 +15,7 @@ public class Signup extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
-
-        getSupportActionBar();
+        getSupportActionBar().hide();
 
         TextView reg_register = (TextView) findViewById(R.id.reg_signin);
         reg_register.setOnClickListener(new View.OnClickListener() {
