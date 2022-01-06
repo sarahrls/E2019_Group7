@@ -1,19 +1,280 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
     tools:context=".SecondPage">
 
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Rooms"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <TextView
+            android:id="@+id/textGrid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="279dp"
+            android:layout_marginBottom="84dp"
+            android:text="Rooms"
+            android:textColor="@android:color/black"
+            android:textSize="34sp" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="16dp">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1st Year" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2nd Year" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3rd Year" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tabItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4th Year" />
+        </com.google.android.material.tabs.TabLayout>
+    </RelativeLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:alignmentMode="alignMargins"
+        android:columnOrderPreserved="false"
+        android:padding="23dp"
+        android:rowCount="2"
+        android:columnCount="2"
+
+        >
+        <!-- Row 1 -->
+        <!-- Column 1 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="180dp"
+            android:layout_height="220dp"
+            android:layout_columnWight="1"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginleft="100dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="180dp"
+                android:layout_height="220dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:text="CC 101"
+                    android:textAlignment="center"
+                    android:textSize="34sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="match_parent"
+                    android:layout_height="85dp"
+                    android:layout_marginTop="0dp"
+                    android:text="Introduction to Computing (HTML/CSS)"
+                    android:textAlignment="center"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/button29"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text="Enter" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView
+>
+
+        >
+        <!-- Row 1 -->
+        <!-- Column 2 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="180dp"
+            android:layout_height="220dp"
+            android:layout_columnWight="1"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginleft="50dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="180dp"
+                android:layout_height="220dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="16dp"
+                android:orientation="vertical">
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="CC 102"
+                android:textAlignment="center"
+                android:textSize="34sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:layout_marginTop="45dp"
+                android:text="Introduction to Computing (HTML/CSS)"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+            <Button
+                android:id="@+id/button30"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="150dp"
+                android:layout_marginRight="20dp"
+                android:text="Enter" />
+        </androidx.cardview.widget.CardView>
+
+        >
+        <!-- Row 2 -->
+        <!-- Column 1 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="180dp"
+            android:layout_height="220dp"
+            android:layout_columnWight="1"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginleft="100dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="180dp"
+                android:layout_height="220dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:text="CC 101"
+                    android:textAlignment="center"
+                    android:textSize="34sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="match_parent"
+                    android:layout_height="85dp"
+                    android:layout_marginTop="0dp"
+                    android:text="Introduction to Computing (HTML/CSS)"
+                    android:textAlignment="center"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/button31"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text="Enter" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView
+            >
+
+        >
+        <!-- Row 1 -->
+        <!-- Column 2 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="180dp"
+            android:layout_height="220dp"
+            android:layout_columnWight="1"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginleft="50dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="180dp"
+                android:layout_height="220dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="16dp"
+                android:orientation="vertical">
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="CC 102"
+                android:textAlignment="center"
+                android:textSize="34sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:layout_marginTop="45dp"
+                android:text="Introduction to Computing (HTML/CSS)"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+            <Button
+                android:id="@+id/button32"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="150dp"
+                android:layout_marginRight="20dp"
+                android:text="Enter" />
+        </androidx.cardview.widget.CardView>
+
+    </GridLayout>
+
+
+</LinearLayout>
+
+
