@@ -3,7 +3,7 @@
 
     <item
         android:id="@+id/firstPage"
-        android:title="Home" android:icon="@drawable/ic_round_home_24"/>
+        android:title="Home" android:icon="@drawable/ic_home"/>
     <item
         android:id="@+id/secondPage"
         android:title="Rooms" android:icon="@drawable/ic_round_dashboard_24"/>
