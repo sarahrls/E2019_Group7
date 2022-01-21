@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.knowtech">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -16,16 +17,12 @@
             android:name=".customize_profile"
             android:exported="false" />
         <activity
-            android:name=".Signup"
-            android:exported="false" />
+            android:name=".Signup"></activity>
         <activity
-            android:name=".getStarted"
-            android:exported="false" />
+            android:name=".getStarted" />
         <activity
-            android:name=".Signin"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
+            android:name=".MainActivity" />
+        <activity android:name=".Signin"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

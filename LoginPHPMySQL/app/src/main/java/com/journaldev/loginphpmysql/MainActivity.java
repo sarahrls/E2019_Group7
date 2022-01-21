@@ -36,18 +36,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        editEmail=(EditText)findViewById(R.id.editEmail);
-        editName=(EditText)findViewById(R.id.editName);
-        editPassword=(EditText)findViewById(R.id.editPassword);
+        editEmail = (EditText) findViewById(R.id.editEmail);
+        editName = (EditText) findViewById(R.id.editName);
+        editPassword = (EditText) findViewById(R.id.editPassword);
 
-        btnSignIn=(Button)findViewById(R.id.btnSignIn);
-        btnRegister=(Button)findViewById(R.id.btnRegister);
+        btnSignIn = (Button) findViewById(R.id.btnSignIn);
+        btnRegister = (Button) findViewById(R.id.btnRegister);
 
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AttemptLogin attemptLogin= new AttemptLogin();
-                attemptLogin.execute(editName.getText().toString(),editPassword.getText().toString(),"");
+                AttemptLogin attemptLogin = new AttemptLogin();
+                attemptLogin.execute(editName.getText().toString(), editPassword.getText().toString(), "");
             }
         });
 
@@ -55,22 +55,20 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if(i==0)
-                {
-                    i=1;
+                if (i == 0) {
+                    i = 1;
                     editEmail.setVisibility(View.VISIBLE);
                     btnSignIn.setVisibility(View.GONE);
                     btnRegister.setText("CREATE ACCOUNT");
-                }
-                else{
+                } else {
 
                     btnRegister.setText("REGISTER");
                     editEmail.setVisibility(View.GONE);
                     btnSignIn.setVisibility(View.VISIBLE);
-                    i=0;
+                    i = 0;
 
-                    AttemptLogin attemptLogin= new AttemptLogin();
-                    attemptLogin.execute(editName.getText().toString(),editPassword.getText().toString(),editEmail.getText().toString());
+                    AttemptLogin attemptLogin = new AttemptLogin();
+                    attemptLogin.execute(editName.getText().toString(), editPassword.getText().toString(), editEmail.getText().toString());
 
                 }
 
@@ -107,7 +105,6 @@ public class MainActivity extends AppCompatActivity {
             params.add(new BasicNameValuePair("email",email));
 
             JSONObject json = jsonParser.makeHttpRequest(URL, "POST", params);
-
 
             return json;
 
