@@ -11,14 +11,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white">
+        android:background="@color/white">
 
         <TextView
-            android:id="@+id/textView18"
+            android:id="@+id/textView14"
             android:layout_width="match_parent"
             android:layout_height="61dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
-            android:text="Rooms"
+            android:text="3rd Year"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
             android:textSize="40dp"
             android:textStyle="bold" />
 
@@ -26,13 +29,12 @@
             android:id="@+id/tabs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
             app:tabMode="fixed">
 
             <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1st Year" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1st Year" />
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
@@ -42,7 +44,7 @@
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="3rd Year" />
+                android:text="3rd year" />
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
@@ -52,60 +54,55 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
-        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
-
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">>
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Rooms"
-            android:textSize="24sp"
-            tools:context=".SecondPage">
+            android:layout_height="wrap_content">
 
             <LinearLayout
-                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
                 <RelativeLayout
-                    android:layout_marginTop="20dp"
-                    android:layout_marginRight="20dp"
+                    android:layout_width="326dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp">
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="2" />
+                    android:layout_weight="2">
 
+                </RelativeLayout>
 
                 <RelativeLayout
-                    android:layout_marginRight="20dp"
-                    android:layout_marginLeft="20dp"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp">
 
                     <TextView
-                        android:id="@+id/FirstSem"
+                        android:id="@+id/textView17"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="First Semester"
                         android:textSize="25dp"
                         android:textStyle="bold" />
-
                 </RelativeLayout>
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:cardElevation="60dp"
+                    android:layout_margin="12dp"
                     app:cardCornerRadius="12dp"
-                    android:layout_margin="12dp">
+                    app:cardElevation="60dp" >
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -116,165 +113,45 @@
                         android:paddingRight="20dp"
                         android:paddingBottom="10dp">
 
-
                         <TextView
-                            android:id="@+id/ClassCC101"
+                            android:id="@+id/ClassIAS101"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:background="@drawable/btn_bg"
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
-                            android:text="CC101"
+                            android:text="IAS101"
                             android:textColor="#FFFFFF"
                             android:textSize="16sp"
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/TitleCC101"
+                            android:id="@+id/TitleIAS101"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/ClassCC101"
-                            android:text="Introduction to Computing"
+                            android:layout_below="@id/ClassIAS101"
+                            android:text="Information Assurance and Security"
                             android:textSize="22sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/TitleCC101"
-                            android:text="HTML, CSS"
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
-
-                        <Button
-                            android:id="@+id/JoinCC101"
-                            android:layout_width="wrap_content"
-                            android:layout_height="48dp"
-                            android:layout_below="@id/TitleCC101"
-                            android:layout_alignParentRight="true"
-                            android:drawableLeft="@drawable/ic_group_add"
-                            android:text="Join"
-                            android:textAllCaps="false"
-                            app:cornerRadius="10dp" />
-                    </RelativeLayout>
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:cardElevation="60dp"
-                    app:cardCornerRadius="12dp"
-                    android:layout_margin="12dp">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:paddingTop="20dp"
-                        android:paddingBottom="10dp"
-                        android:paddingLeft="20dp"
-                        android:paddingRight="20dp">
-
-
-                        <TextView
-                            android:id="@+id/ClassCC102"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/btn_bg"
-                            android:paddingLeft="10dp"
-                            android:paddingRight="10dp"
-                            android:text="CC102"
-                            android:textColor="#FFFFFF"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/TitleCC102"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/ClassCC102"
-                            android:text="Fundamentals of Programming"
-                            android:textSize="22sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/TitleCC102"
-                            android:text="JAVA"
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
-
-                        <Button
-                            android:id="@+id/JoinCC102"
-                            android:layout_width="wrap_content"
-                            android:layout_height="48dp"
-                            android:layout_below="@id/TitleCC102"
-                            android:layout_alignParentRight="true"
-                            android:drawableLeft="@drawable/ic_group_add"
-                            android:text="Join"
-                            android:textAllCaps="false"
-                            app:cornerRadius="10dp" />
-                    </RelativeLayout>
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:cardElevation="60dp"
-                    app:cardCornerRadius="12dp"
-                    android:layout_margin="12dp">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:paddingTop="20dp"
-                        android:paddingBottom="10dp"
-                        android:paddingLeft="20dp"
-                        android:paddingRight="20dp">
-
-
-                        <TextView
-                            android:id="@+id/ClassDS101"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/btn_bg"
-                            android:paddingLeft="10dp"
-                            android:paddingRight="10dp"
-                            android:text="DS101"
-                            android:textColor="#FFFFFF"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/TitleDS101"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/ClassDS101"
-                            android:text="Discrete Structure 1"
-                            android:textSize="22sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/TitleDS101"
+                            android:layout_below="@id/TitleIAS101"
                             android:text=""
                             android:textSize="20sp"
                             android:textStyle="bold" />
 
                         <Button
-                            android:id="@+id/JoinDS101"
+                            android:id="@+id/JoinIAS101"
                             android:layout_width="wrap_content"
                             android:layout_height="48dp"
-                            android:layout_below="@id/TitleDS101"
+                            android:layout_below="@id/TitleIAS101"
                             android:layout_alignParentRight="true"
                             android:drawableLeft="@drawable/ic_group_add"
                             android:text="Join"
                             android:textAllCaps="false"
                             app:cornerRadius="10dp" />
                     </RelativeLayout>
-
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
@@ -295,45 +172,214 @@
 
 
                         <TextView
-                            android:id="@+id/ClassAL101"
+                            android:id="@+id/ClassSE101"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:background="@drawable/btn_bg"
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
-                            android:text="AL101"
+                            android:text="SE101"
                             android:textColor="#FFFFFF"
                             android:textSize="16sp"
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/TitleAL101"
+                            android:id="@+id/TitleSE101"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/ClassAL101"
-                            android:text="Algorithms"
+                            android:layout_below="@id/ClassSE101"
+                            android:text="Software Engineering 1"
                             android:textSize="22sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/TitleAL101"
+                            android:layout_below="@id/TitleSE101"
                             android:text=""
                             android:textSize="20sp"
                             android:textStyle="bold" />
 
                         <Button
-                            android:id="@+id/JoinAL101"
+                            android:id="@+id/JoinSE101"
                             android:layout_width="wrap_content"
                             android:layout_height="48dp"
-                            android:layout_below="@id/TitleAL101"
+                            android:layout_below="@id/TitleSE101"
                             android:layout_alignParentRight="true"
                             android:drawableLeft="@drawable/ic_group_add"
                             android:text="Join"
                             android:textAllCaps="false"
                             app:cornerRadius="10dp" />
                     </RelativeLayout>
+                </androidx.cardview.widget.CardView>
 
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="60dp"
+                    app:cardCornerRadius="12dp"
+                    android:layout_margin="12dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:paddingTop="20dp"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp">
+
+                        <TextView
+                            android:id="@+id/ClassELEC1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/btn_bg"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="ELEC1"
+                            android:textColor="#FFFFFF"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/TitleELEC1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/ClassELEC1"
+                            android:text="Computational Science"
+                            android:textSize="22sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/TitleELEC1"
+                            android:text=""
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/JoinELEC1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="48dp"
+                            android:layout_below="@id/TitleELEC1"
+                            android:layout_alignParentRight="true"
+                            android:drawableLeft="@drawable/ic_group_add"
+                            android:text="Join"
+                            android:textAllCaps="false"
+                            app:cornerRadius="10dp" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="60dp"
+                    app:cardCornerRadius="12dp"
+                    android:layout_margin="12dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:paddingTop="20dp"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp">
+
+                        <TextView
+                            android:id="@+id/textView16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="TextView" />
+
+                        <TextView
+                            android:id="@+id/ClassCC107"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/btn_bg"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="CC107"
+                            android:textColor="#FFFFFF"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/TitleCC107"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/ClassCC107"
+                            android:text="Mobile Programming"
+                            android:textSize="22sp" />
+
+                        <Button
+                            android:id="@+id/JoinCC107"
+                            android:layout_width="wrap_content"
+                            android:layout_height="48dp"
+                            android:layout_below="@id/TitleCC107"
+                            android:layout_alignParentRight="true"
+                            android:drawableLeft="@drawable/ic_group_add"
+                            android:text="Join"
+                            android:textAllCaps="false"
+                            app:cornerRadius="10dp" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="60dp"
+                    app:cardCornerRadius="12dp"
+                    android:layout_margin="12dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:paddingTop="20dp"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp">
+
+                        <TextView
+                            android:id="@+id/ClassIT101"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/btn_bg"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="IT101"
+                            android:textColor="#FFFFFF"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/TitleIT101"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/ClassIT101"
+                            android:text="Micro Controller Programming"
+                            android:textSize="22sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/TitleIT101"
+                            android:text=""
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/JoinIT101"
+                            android:layout_width="wrap_content"
+                            android:layout_height="48dp"
+                            android:layout_below="@id/TitleIT101"
+                            android:layout_alignParentRight="true"
+                            android:drawableLeft="@drawable/ic_group_add"
+                            android:text="Join"
+                            android:textAllCaps="false"
+                            app:cornerRadius="10dp" />
+
+                    </RelativeLayout>
                 </androidx.cardview.widget.CardView>
 
                 <RelativeLayout
@@ -349,7 +395,6 @@
                         android:text="Second Semester"
                         android:textSize="25dp"
                         android:textStyle="bold" />
-
                 </RelativeLayout>
 
                 <androidx.cardview.widget.CardView
@@ -368,106 +413,46 @@
                         android:paddingLeft="20dp"
                         android:paddingRight="20dp">
 
-
                         <TextView
-                            android:id="@+id/ClassCC103"
+                            android:id="@+id/ClassELEC2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:background="@drawable/btn_bg"
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
-                            android:text="CC103"
+                            android:text="ELEC2"
                             android:textColor="#FFFFFF"
                             android:textSize="16sp"
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/TitleCC103"
+                            android:id="@+id/TitleELEC2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/ClassCC103"
-                            android:text="Intermediate Programming"
+                            android:layout_below="@id/ClassELEC2"
+                            android:text="Intellegent System"
                             android:textSize="22sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/TitleCC103"
-                            android:text="Advance Java"
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
-
-                        <Button
-                            android:id="@+id/JoinCC103"
-                            android:layout_width="wrap_content"
-                            android:layout_height="48dp"
-                            android:layout_below="@id/TitleCC103"
-                            android:layout_alignParentRight="true"
-                            android:drawableLeft="@drawable/ic_group_add"
-                            android:text="Join"
-                            android:textAllCaps="false"
-                            app:cornerRadius="10dp" />
-                    </RelativeLayout>
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:cardElevation="60dp"
-                    app:cardCornerRadius="12dp"
-                    android:layout_margin="12dp">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:paddingTop="20dp"
-                        android:paddingBottom="10dp"
-                        android:paddingLeft="20dp"
-                        android:paddingRight="20dp">
-
-
-                        <TextView
-                            android:id="@+id/ClassCC104"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/btn_bg"
-                            android:paddingLeft="10dp"
-                            android:paddingRight="10dp"
-                            android:text="CC104"
-                            android:textColor="#FFFFFF"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/TitleCC104"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/ClassCC104"
-                            android:text="Data Structures and Algorithms"
-                            android:textSize="22sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/TitleCC104"
+                            android:layout_below="@id/TitleELEC2"
                             android:text=""
                             android:textSize="20sp"
                             android:textStyle="bold" />
 
                         <Button
-                            android:id="@+id/JoinACC104"
+                            android:id="@+id/JoinELEC2"
                             android:layout_width="wrap_content"
                             android:layout_height="48dp"
-                            android:layout_below="@id/TitleCC104"
+                            android:layout_below="@id/TitleELEC2"
                             android:layout_alignParentRight="true"
                             android:drawableLeft="@drawable/ic_group_add"
                             android:text="Join"
                             android:textAllCaps="false"
                             app:cornerRadius="10dp" />
-                    </RelativeLayout>
 
+                    </RelativeLayout>
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
@@ -488,109 +473,333 @@
 
 
                         <TextView
-                            android:id="@+id/ClassCC105"
+                            android:id="@+id/ClassSE102"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:background="@drawable/btn_bg"
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
-                            android:text="CC105"
+                            android:text="SE102"
                             android:textColor="#FFFFFF"
                             android:textSize="16sp"
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/TitleCC105"
+                            android:id="@+id/TitleSE102"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/ClassCC105"
-                            android:text="Information Management"
+                            android:layout_below="@id/ClassSE102"
+                            android:text="Software Engineering 2"
                             android:textSize="22sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/TitleCC105"
-                            android:text="Database, SQL"
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
-
-                        <Button
-                            android:id="@+id/JoinCC105"
-                            android:layout_width="wrap_content"
-                            android:layout_height="48dp"
-                            android:layout_below="@id/TitleCC105"
-                            android:layout_alignParentRight="true"
-                            android:drawableLeft="@drawable/ic_group_add"
-                            android:text="Join"
-                            android:textAllCaps="false"
-                            app:cornerRadius="10dp" />
-                    </RelativeLayout>
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:cardElevation="60dp"
-                    app:cardCornerRadius="12dp"
-                    android:layout_margin="12dp">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:paddingTop="20dp"
-                        android:paddingBottom="10dp"
-                        android:paddingLeft="20dp"
-                        android:paddingRight="20dp">
-
-
-                        <TextView
-                            android:id="@+id/ClassDS102"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/btn_bg"
-                            android:paddingLeft="10dp"
-                            android:paddingRight="10dp"
-                            android:text="DS102"
-                            android:textColor="#FFFFFF"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/TitleDS102"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/ClassDS102"
-                            android:text="Discrete Structure 2"
-                            android:textSize="22sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/TitleDS102"
+                            android:layout_below="@id/TitleSE102"
                             android:text=""
                             android:textSize="20sp"
                             android:textStyle="bold" />
 
                         <Button
-                            android:id="@+id/JoinDS102"
+                            android:id="@+id/JoinSE102"
                             android:layout_width="wrap_content"
                             android:layout_height="48dp"
-                            android:layout_below="@id/TitleDS102"
+                            android:layout_below="@id/TitleSE102"
                             android:layout_alignParentRight="true"
                             android:drawableLeft="@drawable/ic_group_add"
                             android:text="Join"
                             android:textAllCaps="false"
                             app:cornerRadius="10dp" />
                     </RelativeLayout>
-
                 </androidx.cardview.widget.CardView>
 
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="60dp"
+                    app:cardCornerRadius="12dp"
+                    android:layout_margin="12dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:paddingTop="20dp"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp">
+
+                        <TextView
+                            android:id="@+id/ClassTHS101"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/btn_bg"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="THS101"
+                            android:textColor="#FFFFFF"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/TitleTHS101"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/ClassTHS101"
+                            android:text="CS Thesis Writing 1"
+                            android:textSize="22sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/TitleTHS101"
+                            android:text=""
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/JoinTHS101"
+                            android:layout_width="wrap_content"
+                            android:layout_height="48dp"
+                            android:layout_below="@id/TitleTHS101"
+                            android:layout_alignParentRight="true"
+                            android:drawableLeft="@drawable/ic_group_add"
+                            android:text="Join"
+                            android:textAllCaps="false"
+                            app:cornerRadius="10dp" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="60dp"
+                    app:cardCornerRadius="12dp"
+                    android:layout_margin="12dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:paddingTop="20dp"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp">
+
+                        <TextView
+                            android:id="@+id/ClassELEC3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/btn_bg"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="ELEC3"
+                            android:textColor="#FFFFFF"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/TitleELEC3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/ClassELEC3"
+                            android:text="Parallel and Distributed Computation"
+                            android:textSize="22sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/TitleELEC3"
+                            android:text=""
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/JoinELEC3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="48dp"
+                            android:layout_below="@id/TitleELEC3"
+                            android:layout_alignParentRight="true"
+                            android:drawableLeft="@drawable/ic_group_add"
+                            android:text="Join"
+                            android:textAllCaps="false"
+                            app:cornerRadius="10dp" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="60dp"
+                    app:cardCornerRadius="12dp"
+                    android:layout_margin="12dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:paddingTop="20dp"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp">
+
+                        <TextView
+                            android:id="@+id/ClassCC108"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/btn_bg"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="CC108"
+                            android:textColor="#FFFFFF"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/TitleCC108"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/ClassCC108"
+                            android:text="Content Management System"
+                            android:textSize="22sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/TitleCC108"
+                            android:text=""
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/JoinCC108"
+                            android:layout_width="wrap_content"
+                            android:layout_height="48dp"
+                            android:layout_below="@id/TitleCC108"
+                            android:layout_alignParentRight="true"
+                            android:drawableLeft="@drawable/ic_group_add"
+                            android:text="Join"
+                            android:textAllCaps="false"
+                            app:cornerRadius="10dp" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="60dp"
+                    app:cardCornerRadius="12dp"
+                    android:layout_margin="12dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:paddingTop="20dp"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp">
+
+                        <TextView
+                            android:id="@+id/ClassOS102"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/btn_bg"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="OS102"
+                            android:textColor="#FFFFFF"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/TitleOS102"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/ClassOS102"
+                            android:text="Open Source Operating System"
+                            android:textSize="22sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/TitleOS102"
+                            android:text=""
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/JoinOS102"
+                            android:layout_width="wrap_content"
+                            android:layout_height="48dp"
+                            android:layout_below="@id/TitleOS102"
+                            android:layout_alignParentRight="true"
+                            android:drawableLeft="@drawable/ic_group_add"
+                            android:text="Join"
+                            android:textAllCaps="false"
+                            app:cornerRadius="10dp" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="60dp"
+                    app:cardCornerRadius="12dp"
+                    android:layout_margin="12dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:paddingTop="20dp"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp">
+
+                        <TextView
+                            android:id="@+id/ClassIT102"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/btn_bg"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="IT102"
+                            android:textColor="#FFFFFF"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/TitleIT102"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/ClassIT102"
+                            android:text="Social Media Presentation"
+                            android:textSize="22sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/TitleIT102"
+                            android:text=""
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/JoinIT102"
+                            android:layout_width="wrap_content"
+                            android:layout_height="48dp"
+                            android:layout_below="@id/TitleIT102"
+                            android:layout_alignParentRight="true"
+                            android:drawableLeft="@drawable/ic_group_add"
+                            android:text="Join"
+                            android:textAllCaps="false"
+                            app:cornerRadius="10dp" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
             </LinearLayout>
-
         </ScrollView>
-    </androidx.core.widget.NestedScrollView>
 
+
+    </androidx.core.widget.NestedScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
