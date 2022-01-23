@@ -20,7 +20,7 @@
         android:layout_marginTop="12dp"
         android:layout_marginEnd="54dp"
         android:fontFamily="@font/noto_sans_bold"
-        android:text="@string/sign_in"
+        android:text="Sign in"
         android:textColor="#BE65CF"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,7 +34,7 @@
         android:layout_marginTop="13dp"
         android:layout_marginEnd="103dp"
         android:background="@drawable/btn_bg"
-        android:text="@string/register"
+        android:text="Register"
         android:textAllCaps="false"
         android:textSize="18dp"
         app:cornerRadius="16dp"
@@ -59,11 +59,11 @@
         android:layout_width="409dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="10dp"
-        android:hint="@string/password"
+        android:layout_marginTop="47dp"
+        android:hint="Password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_password"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout3"
         app:placeholderTextColor="#000000">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -75,27 +75,16 @@
             android:textSize="20sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/text_password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="464dp"
-        android:layout_marginEnd="276dp"
-        android:fontFamily="@font/noto_sans_bold"
-        android:text="Password"
-        android:textColor="#9C27B0"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout3"
         android:layout_width="370dp"
         android:layout_height="71dp"
-        android:layout_marginTop="12dp"
-        android:hint="@string/email"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="56dp"
+        android:hint="Email"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
         app:placeholderTextColor="#9C27B0">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -107,26 +96,13 @@
             android:textSize="20sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/text_email"
-        android:layout_width="58dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/noto_sans_bold"
-        android:text="Email"
-        android:textColor="#9C27B0"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
-
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout2"
         android:layout_width="370dp"
         android:layout_height="71dp"
         android:layout_marginTop="259dp"
         android:layout_marginEnd="1dp"
-        android:hint="@string/username"
+        android:hint="Username"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:placeholderTextColor="#9C27B0">
@@ -139,19 +115,6 @@
             android:fontFamily="@font/noto_sans"
             android:textSize="20sp" />
     </com.google.android.material.textfield.TextInputLayout>
-
-    <TextView
-        android:id="@+id/text_username"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
-        android:layout_marginEnd="268dp"
-        android:fontFamily="@font/noto_sans_bold"
-        android:text="Username"
-        android:textColor="#9C27B0"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
     <TextView
         android:id="@+id/textView17"

@@ -33,25 +33,20 @@ android {
 }
 
 dependencies {
-<<<<<<< HEAD
-    implementation 'com.github.VishnuSivadasVS:Advanced-HttpURLConnection:1.2'
-=======
+
     implementation 'com.android.support:design:+'
->>>>>>> f173c8360626d9a1f34c2df26ce17807a12ef070
     implementation 'androidx.appcompat:appcompat:1.4.0'
     implementation 'com.google.android.material:material:1.4.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
     implementation 'androidx.navigation:navigation-fragment:2.3.5'
     implementation 'androidx.navigation:navigation-ui:2.3.5'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-<<<<<<< HEAD
     implementation 'com.squareup.retrofit2:retrofit:2.3.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     implementation 'com.android.volley:volley:1.2.1'
-=======
     implementation 'androidx.gridlayout:gridlayout:1.0.0'
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.0'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0'
@@ -59,5 +54,4 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
->>>>>>> f173c8360626d9a1f34c2df26ce17807a12ef070
 }
