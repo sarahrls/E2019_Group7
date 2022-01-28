@@ -26,17 +26,24 @@
 
 
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="2" />
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rooms"
+                    android:textColor="#434343"
+                    android:textSize="40sp"
+                    android:textStyle="bold"
+                    android:paddingRight="20dp"
+                    android:paddingTop="20dp"
+                    android:paddingLeft="20dp"
+                    android:paddingBottom="10dp"/>
 
                 <RelativeLayout
                     android:id="@+id/p"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:layout_marginTop="20dp"
                     android:layout_marginBottom="20dp"
                     android:layout_marginRight="20dp">
 
@@ -70,7 +77,6 @@
                         android:id="@+id/FirstSem"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-
                         android:text="First Semester"
                         android:textSize="25dp"
                         android:textStyle="bold" />

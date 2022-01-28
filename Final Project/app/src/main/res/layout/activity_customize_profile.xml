@@ -5,7 +5,7 @@
     android:id="@+id/profile_lastname"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D9DAC7C7"
+    android:background="#FFFF"
     tools:context=".customize_profile">
 
     <TextView
@@ -31,10 +31,11 @@
         tools:layout_editor_absoluteY="38dp" />
 
     <TextView
-        android:id="@+id/textView4"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/inputLastname"
         android:layout_width="331dp"
         android:layout_height="50dp"
-        android:background="#99C5C0C0"
+        android:background="#FFFF"
         android:text="Lastname"
         android:textColor="#2B2727"
         android:textSize="18sp"
