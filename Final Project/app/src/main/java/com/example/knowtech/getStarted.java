@@ -23,8 +23,5 @@ public class getStarted extends AppCompatActivity {
                 startActivity(int1);
             }
         });
-
-
-
     }
 }

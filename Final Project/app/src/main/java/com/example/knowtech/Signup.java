@@ -19,17 +19,6 @@ import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
 
-import com.android.volley.AuthFailureError;
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-
-import com.android.volley.Response.ErrorListener;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
-
-
-
 import java.util.HashMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -39,10 +28,8 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import java.util.Map;
 
-
-
-
 import java.util.ArrayList;
+
 
 public class Signup extends AppCompatActivity {
 
@@ -90,9 +77,7 @@ public class Signup extends AppCompatActivity {
                     Toast.makeText(Signup.this, "Enter email", Toast.LENGTH_SHORT).show();
                 } else if (Password.getText().toString().equals("")) {
                     Toast.makeText(Signup.this, "Enter password", Toast.LENGTH_SHORT).show();
-                }/* else if (!emailValidator(inputemail.getText().toString())) {
-                    Toast.makeText(RegisterActivity.this, "Enter valid email", Toast.LENGTH_SHORT).show();
-                } */ else {
+                } else {
 
                     HashMap<String, String> params = new HashMap<>();
                     params.put("username", Username.getText().toString());
@@ -106,15 +91,6 @@ public class Signup extends AppCompatActivity {
         });
 
     }
-/*
-    public boolean emailValidator(String email) {
-        Pattern pattern;
-        Matcher matcher;
-        final String EMAIL_PATTERN = "^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
-        pattern = Pattern.compile(EMAIL_PATTERN);
-        matcher = pattern.matcher(email);
-        return matcher.matches();
-    }*/
 
     private void register(HashMap<String, String> params) {
 

@@ -9,92 +9,130 @@
     tools:context=".customize_profile">
 
     <TextView
-        android:id="@+id/textView10"
-        android:layout_width="331dp"
-        android:layout_height="46dp"
-        android:background="#99C5C0C0"
-        android:text="Firstname"
-        android:textColor="#2B2727"
-        android:textSize="18sp"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="411dp" />
-
-    <TextView
         android:id="@+id/textView"
         android:layout_width="340dp"
-        android:layout_height="35dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="48dp"
         android:fontFamily="@font/noto_sans_bold"
         android:text="Let's customize your Profile!"
         android:textColor="#2B2727"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="38dp" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="331dp"
-        android:layout_height="50dp"
-        android:background="#99C5C0C0"
-        android:text="Lastname"
-        android:textColor="#2B2727"
-        android:textSize="18sp"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="120dp" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="331dp"
-        android:layout_height="46dp"
-        android:background="#99C5C0C0"
-        android:text="Firstname"
-        android:textColor="#2B2727"
-        android:textSize="18sp"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="192dp" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="331dp"
-        android:layout_height="46dp"
-        android:background="#99C5C0C0"
-        android:text="Firstname"
-        android:textColor="#2B2727"
-        android:textSize="18sp"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="558dp" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="331dp"
-        android:layout_height="46dp"
-        android:background="#99C5C0C0"
-        android:text="Firstname"
-        android:textColor="#2B2727"
-        android:textSize="18sp"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="333dp" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="331dp"
-        android:layout_height="46dp"
-        android:background="#99C5C0C0"
-        android:text="Middlename (Optional)"
-        android:textColor="#2B2727"
-        android:textSize="18sp"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="261dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.225"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="242dp"
-        android:layout_height="63dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="80dp"
         android:capitalize="none"
         android:fontFamily="@font/noto_sans_bold"
         android:text="customize"
         android:textSize="16sp"
         app:cornerRadius="15dp"
-        tools:layout_editor_absoluteX="88dp"
-        tools:layout_editor_absoluteY="642dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout4"
+        android:layout_width="360dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="30dp"
+        android:hint="Lastname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_Lastname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_sans"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout5"
+        android:layout_width="360dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="20dp"
+        android:hint="Firstname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout4">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_Firstname"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/noto_sans"
+            android:textSize="18sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout6"
+        android:layout_width="360dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="20dp"
+        android:hint="Age"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout5">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_Age"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <EditText
+        android:id="@+id/editTextDate"
+        android:layout_width="360dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="20dp"
+        android:background="#E3E0E0"
+        android:ems="10"
+        android:hint="Birthday"
+        android:inputType="date"
+        android:textColor="#231F1F"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout6" />
+
+    <Spinner
+        android:id="@+id/edit_Gender"
+        android:layout_width="360dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="20dp"
+        android:Text="Gender"
+        android:background="#E8E6E6"
+        android:entries="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDate"
+        tools:ignore="SpeakableTextPresentCheck"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout8"
+        android:layout_width="360dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_Gender">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_Contact"
+            android:layout_width="360dp"
+            android:layout_height="63dp"
+            android:hint="Contact Number" />
+    </com.google.android.material.textfield.TextInputLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
