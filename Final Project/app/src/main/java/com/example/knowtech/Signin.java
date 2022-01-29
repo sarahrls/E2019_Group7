@@ -108,7 +108,7 @@ public class Signin extends AppCompatActivity {
                         editor.putString(Constants.KEY_EMAIL, responseBody.getUserDetailObject().getUserDetails().get(0).getEmail());
                         editor.apply();
                         Toast.makeText(Signin.this, responseBody.getMessage(), Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(getApplicationContext(),Homepage.class));
+                        startActivity(new Intent(getApplicationContext(),Rooms.class));
                         finish();
                     } else {
                         Toast.makeText(Signin.this, responseBody.getMessage(), Toast.LENGTH_SHORT).show();

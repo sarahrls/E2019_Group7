@@ -3,14 +3,14 @@
 
     <item
         android:id="@+id/firstPage"
-        android:title="Home" android:icon="@drawable/ic_home"/>
+        android:icon="@drawable/ic_home"
+        android:title="Rooms"/>
     <item
         android:id="@+id/secondPage"
-        android:title="Rooms" android:icon="@drawable/ic_round_dashboard_24"/>
+        android:icon="@drawable/ic_round_dashboard_24"
+        android:title="Saved"/>
     <item
         android:id="@+id/thirdPage"
-        android:title="Saved" android:icon="@drawable/ic_round_bookmarks_24"/>
-    <item
-        android:id="@+id/fourthPage"
-        android:title="Notifications" android:icon="@drawable/ic_round_notifications_24"/>
+        android:icon="@drawable/ic_round_bookmarks_24"
+        android:title="Notification"/>
 </menu>
