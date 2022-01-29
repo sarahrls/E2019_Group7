@@ -11,22 +11,38 @@
     <TextView
         android:id="@+id/textView"
         android:layout_width="340dp"
+<<<<<<< Updated upstream
         android:layout_height="0dp"
         android:layout_marginTop="48dp"
+=======
+        android:layout_height="35dp"
+        android:layout_marginTop="56dp"
+>>>>>>> Stashed changes
         android:fontFamily="@font/noto_sans_bold"
         android:text="Let's customize your Profile!"
         android:textColor="#2B2727"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+<<<<<<< Updated upstream
         app:layout_constraintHorizontal_bias="0.225"
+=======
+        app:layout_constraintHorizontal_bias="0.464"
+>>>>>>> Stashed changes
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="242dp"
+<<<<<<< Updated upstream
         android:layout_height="0dp"
         android:layout_marginBottom="80dp"
+=======
+        android:layout_height="63dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginEnd="81dp"
+        android:layout_marginBottom="26dp"
+>>>>>>> Stashed changes
         android:capitalize="none"
         android:fontFamily="@font/noto_sans_bold"
         android:text="customize"
@@ -34,20 +50,34 @@
         app:cornerRadius="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+<<<<<<< Updated upstream
         app:layout_constraintHorizontal_bias="0.55"
+=======
+>>>>>>> Stashed changes
         app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout4"
+<<<<<<< Updated upstream
         android:layout_width="360dp"
         android:layout_height="63dp"
         android:layout_marginTop="30dp"
         android:hint="Lastname"
+=======
+        android:layout_width="359dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="488dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="22dp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+>>>>>>> Stashed changes
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <com.google.android.material.textfield.TextInputEditText
+<<<<<<< Updated upstream
             android:id="@+id/edit_Lastname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -133,6 +163,52 @@
             android:layout_width="360dp"
             android:layout_height="63dp"
             android:hint="Contact Number" />
+=======
+            android:layout_width="351dp"
+            android:layout_height="52dp"
+            android:hint="Contact Number"
+            android:textSize="18sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RadioButton
+        android:id="@+id/Female"
+        android:layout_width="167dp"
+        android:layout_height="49dp"
+        android:background="@color/white"
+        android:text="Female"
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="501dp" />
+
+    <RadioButton
+        android:id="@+id/Male"
+        android:layout_width="162dp"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:text="Male"
+        tools:layout_editor_absoluteX="211dp"
+        tools:layout_editor_absoluteY="500dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="43dp"
+        tools:layout_editor_absoluteY="474dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="359dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="hint" />
+>>>>>>> Stashed changes
     </com.google.android.material.textfield.TextInputLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

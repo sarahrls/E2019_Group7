@@ -35,13 +35,8 @@ public class Signup extends AppCompatActivity {
 
     TextView reg_register;
     TextInputEditText Username, Email, Password;
-    String str_username, str_email, str_password;
     Button register;
 
-    String URL = "https://knowtech-study-room.000webhostapp.com/register.php";
-    JSONParser jsonParser = new JSONParser();
-
-    int i = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
