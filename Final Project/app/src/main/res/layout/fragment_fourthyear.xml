@@ -94,62 +94,7 @@
                     android:textStyle="bold" />
             </RelativeLayout>
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="12dp"
-                    app:cardCornerRadius="12dp"
-                    app:cardElevation="60dp" >
 
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:paddingLeft="20dp"
-                        android:paddingTop="20dp"
-                        android:paddingRight="20dp"
-                        android:paddingBottom="10dp">
-
-                        <TextView
-                            android:id="@+id/ClassTHS102"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/btn_bg"
-                            android:paddingLeft="10dp"
-                            android:paddingRight="10dp"
-                            android:text="THS102"
-                            android:textColor="#FFFFFF"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/TitleTHS102"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/ClassTHS102"
-                            android:text="CS Thesis Writing 2 "
-                            android:textSize="22sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/TitleTHS102"
-                            android:text=""
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
-
-                        <Button
-                            android:id="@+id/JoinTHS102"
-                            android:layout_width="wrap_content"
-                            android:layout_height="48dp"
-                            android:layout_below="@id/TitleTHS102"
-                            android:layout_alignParentRight="true"
-                            android:drawableLeft="@drawable/ic_group_add"
-                            android:text="Join"
-                            android:textAllCaps="false"
-                            app:cornerRadius="10dp" />
-                    </RelativeLayout>
-                </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
@@ -160,7 +105,8 @@
 
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="200dp"
+                        android:background="@drawable/elec4"
                         android:orientation="vertical"
                         android:paddingLeft="20dp"
                         android:paddingTop="20dp"
@@ -183,8 +129,10 @@
                             android:id="@+id/TitleELEC4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/ClassELEC4"
+                            android:layout_below="@+id/ClassELEC4"
+                            android:layout_marginTop="117dp"
                             android:text="Graphic and Visual Computing"
+                            android:textColor="#ffff"
                             android:textSize="22sp" />
 
                         <TextView
@@ -195,16 +143,6 @@
                             android:textSize="20sp"
                             android:textStyle="bold" />
 
-                        <Button
-                            android:id="@+id/JoinELEC4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="48dp"
-                            android:layout_below="@id/TitleELEC4"
-                            android:layout_alignParentRight="true"
-                            android:drawableLeft="@drawable/ic_group_add"
-                            android:text="Join"
-                            android:textAllCaps="false"
-                            app:cornerRadius="10dp" />
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -217,7 +155,8 @@
 
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="200dp"
+                        android:background="@drawable/elec5"
                         android:orientation="vertical"
                         android:paddingLeft="20dp"
                         android:paddingTop="20dp"
@@ -240,8 +179,10 @@
                             android:id="@+id/TitleELEC5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/ClassELEC5"
+                            android:layout_below="@+id/ClassELEC5"
+                            android:layout_marginTop="118dp"
                             android:text="System Fundamentals"
+                            android:textColor="#ffff"
                             android:textSize="22sp" />
 
                         <TextView
@@ -252,16 +193,7 @@
                             android:textSize="20sp"
                             android:textStyle="bold" />
 
-                        <Button
-                            android:id="@+id/JoinELEC5"
-                            android:layout_width="wrap_content"
-                            android:layout_height="48dp"
-                            android:layout_below="@id/TitleELEC5"
-                            android:layout_alignParentRight="true"
-                            android:drawableLeft="@drawable/ic_group_add"
-                            android:text="Join"
-                            android:textAllCaps="false"
-                            app:cornerRadius="10dp" />
+
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -274,7 +206,8 @@
 
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="200dp"
+                        android:background="@drawable/sdf105"
                         android:orientation="vertical"
                         android:paddingLeft="20dp"
                         android:paddingTop="20dp"
@@ -297,8 +230,10 @@
                             android:id="@+id/TitleSDF105"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/ClassSDF105"
+                            android:layout_below="@+id/ClassSDF105"
+                            android:layout_marginTop="114dp"
                             android:text="Object Oriented Programming 2"
+                            android:textColor="#ffff"
                             android:textSize="22sp" />
 
                         <TextView
@@ -309,16 +244,6 @@
                             android:textSize="20sp"
                             android:textStyle="bold" />
 
-                        <Button
-                            android:id="@+id/JoinSDF105"
-                            android:layout_width="wrap_content"
-                            android:layout_height="48dp"
-                            android:layout_below="@id/TitleSDF105"
-                            android:layout_alignParentRight="true"
-                            android:drawableLeft="@drawable/ic_group_add"
-                            android:text="Join"
-                            android:textAllCaps="false"
-                            app:cornerRadius="10dp" />
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -331,7 +256,8 @@
 
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="200dp"
+                        android:background="@drawable/hci102"
                         android:orientation="vertical"
                         android:paddingLeft="20dp"
                         android:paddingTop="20dp"
@@ -354,8 +280,10 @@
                             android:id="@+id/TitleHCI102"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/ClassHCI102"
+                            android:layout_below="@+id/ClassHCI102"
+                            android:layout_marginTop="108dp"
                             android:text="Technoprenuership / E-Commerce"
+                            android:textColor="#ffff"
                             android:textSize="22sp" />
 
                         <TextView
@@ -366,16 +294,7 @@
                             android:textSize="20sp"
                             android:textStyle="bold" />
 
-                        <Button
-                            android:id="@+id/JoinHCI102"
-                            android:layout_width="wrap_content"
-                            android:layout_height="48dp"
-                            android:layout_below="@id/TitleHCI102"
-                            android:layout_alignParentRight="true"
-                            android:drawableLeft="@drawable/ic_group_add"
-                            android:text="Join"
-                            android:textAllCaps="false"
-                            app:cornerRadius="10dp" />
+
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
 

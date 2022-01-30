@@ -48,7 +48,6 @@ public class Signup extends AppCompatActivity {
 
     TextView reg_register;
     TextInputEditText Username, Email, Password;
-    String str_username, str_email, str_password;
     Button register;
 
     String URL = "https://knowtech-study-room.000webhostapp.com/register.php";
@@ -90,9 +89,7 @@ public class Signup extends AppCompatActivity {
                     Toast.makeText(Signup.this, "Enter email", Toast.LENGTH_SHORT).show();
                 } else if (Password.getText().toString().equals("")) {
                     Toast.makeText(Signup.this, "Enter password", Toast.LENGTH_SHORT).show();
-                }/* else if (!emailValidator(inputemail.getText().toString())) {
-                    Toast.makeText(RegisterActivity.this, "Enter valid email", Toast.LENGTH_SHORT).show();
-                } */ else {
+                } else {
 
                     HashMap<String, String> params = new HashMap<>();
                     params.put("username", Username.getText().toString());
