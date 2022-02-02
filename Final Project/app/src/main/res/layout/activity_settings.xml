@@ -288,43 +288,135 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentBottom="true"
-                    android:layout_marginEnd="254dp"
-                    android:layout_marginBottom="6dp"
-                    android:text="About"
+                    android:layout_marginEnd="137dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="About knowtech"
                     android:textSize="25dp"
                     android:textStyle="bold" />
             </RelativeLayout>
-            <RelativeLayout
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="55dp">
+                android:layout_height="35dp">
 
                 <TextView
                     android:id="@+id/textView37"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginEnd="149dp"
-                    android:layout_marginBottom="8dp"
-                    android:text="Logout"
-                    android:textSize="25dp"
-                    android:textStyle="bold" />
-            </RelativeLayout>
-            <RelativeLayout
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Help and Support"
+                    android:textSize="18dp" />
+
+                <RelativeLayout
+                    android:layout_width="30dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="350dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/ic_round_arrow_forward_ios_24">
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="55dp">
+                android:layout_height="35dp">
 
                 <TextView
                     android:id="@+id/textView38"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Terms of Use"
+                    android:textSize="18dp" />
+
+                <RelativeLayout
+                    android:layout_width="30dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="350dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/ic_round_arrow_forward_ios_24">
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="35dp">
+
+                <TextView
+                    android:id="@+id/textView39"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Privacy Policy"
+                    android:textSize="18dp" />
+
+                <RelativeLayout
+                    android:layout_width="30dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="350dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/ic_round_arrow_forward_ios_24">
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="35dp">
+
+                <TextView
+                    android:id="@+id/textView40"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Code of Conduct"
+                    android:textSize="18dp" />
+
+                <RelativeLayout
+                    android:layout_width="30dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="350dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/ic_round_arrow_forward_ios_24">
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp" >
+
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentBottom="true"
-                    android:layout_marginEnd="94dp"
-                    android:layout_marginBottom="11dp"
-                    android:text="Delete Account"
-                    android:textSize="25dp"
-                    android:textStyle="bold" />
+                    android:layout_marginStart="144dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="121dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/btn_bg"
+                    android:text="Logout" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+
+                <Button
+                    android:id="@+id/button5"
+                    android:layout_width="170dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="99dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/btn_bg"
+                    android:text="Delete Account" />
             </RelativeLayout>
         </LinearLayout>
     </ScrollView>
