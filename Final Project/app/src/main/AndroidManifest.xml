@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KnowTech">
         <activity
+            android:name=".Activity_Profile"
+            android:exported="false" />
+        <activity
             android:name=".RoomDS102"
             android:exported="false" />
         <activity
