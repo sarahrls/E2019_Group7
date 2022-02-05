@@ -27,11 +27,6 @@
 
 
                 <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="2" />
-
-                <RelativeLayout
                     android:id="@+id/p"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -342,7 +337,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@+id/ClassCC103"
-                            android:layout_marginTop="86dp"
+                            android:layout_marginTop="115dp"
                             android:text="Intermediate Programming"
                             android:textColor="#ffff"
                             android:textSize="22sp" />
@@ -351,7 +346,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@+id/ClassCC103"
-                            android:layout_marginTop="59dp"
+                            android:layout_marginTop="91dp"
                             android:text="Advance Java"
                             android:textColor="#FFFFFF"
                             android:textSize="20sp"
@@ -370,7 +365,8 @@
 
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="200dp"
+                        android:background="@drawable/algorithm"
                         android:orientation="vertical"
                         android:paddingLeft="20dp"
                         android:paddingTop="20dp"
@@ -406,16 +402,6 @@
                             android:textSize="20sp"
                             android:textStyle="bold" />
 
-                        <Button
-                            android:id="@+id/JoinACC104"
-                            android:layout_width="wrap_content"
-                            android:layout_height="48dp"
-                            android:layout_below="@id/TitleCC104"
-                            android:layout_alignParentRight="true"
-                            android:drawableLeft="@drawable/ic_group_add"
-                            android:text="Join"
-                            android:textAllCaps="false"
-                            app:cornerRadius="10dp" />
                     </RelativeLayout>
 
                 </androidx.cardview.widget.CardView>
