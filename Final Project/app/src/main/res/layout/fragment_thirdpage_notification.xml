@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ThirdPage">
+    tools:context=".ThirdPage_Notification">
 
     <TextView
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Saved"
+        android:text="Notification"
         android:textColor="#434343"
         android:textSize="40sp"
         android:textStyle="bold"

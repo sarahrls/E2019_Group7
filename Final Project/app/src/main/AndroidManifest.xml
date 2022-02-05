@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.knowtech">
+
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -10,12 +11,15 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.KnowTech" >
+        android:theme="@style/Theme.KnowTech">
+        <activity
+            android:name=".SecondActivity2"
+            android:exported="false" />
         <activity
             android:name=".Rooms"
             android:exported="false"
             android:label="@string/title_activity_rooms"
-            android:theme="@style/Theme.KnowTech.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".RoomCC101"
             android:exported="false" />
@@ -26,9 +30,6 @@
             android:theme="@style/Theme.KnowTech.NoActionBar"
             tools:ignore="Instantiatable" />
         <activity
-            android:name=".Homepage"
-            android:exported="false" />
-        <activity
             android:name=".customize_profile"
             android:exported="false" />
         <activity android:name=".Signup" />
@@ -36,7 +37,7 @@
         <activity android:name=".MainActivity" />
         <activity
             android:name=".Signin"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -48,6 +49,5 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>
-
 
 </manifest>

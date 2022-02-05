@@ -16,4 +16,10 @@ public interface NetworkService {
    @FormUrlEncoded
     @POST("login.php")
     Call<LoginResponseModel> login(@Field("email") String email, @Field("password") String password);
+
+    @FormUrlEncoded
+    @POST("profile.php")
+    Call<RegistrationResponseModel> profile(@FieldMap HashMap<String, String> params);
+
+
 }
