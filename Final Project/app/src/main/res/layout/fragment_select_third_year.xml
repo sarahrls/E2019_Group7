@@ -86,7 +86,6 @@
                                 android:textSize="20sp"
                                 android:textStyle="bold" />
 
-
                         </RelativeLayout>
                     </androidx.cardview.widget.CardView>
 
@@ -407,8 +406,6 @@
 
                         </RelativeLayout>
                     </androidx.cardview.widget.CardView>
-
-
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="wrap_content"
