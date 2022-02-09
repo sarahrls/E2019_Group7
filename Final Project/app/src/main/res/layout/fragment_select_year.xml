@@ -78,19 +78,19 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@+id/ClassCC101"
-                                android:layout_marginTop="112dp"
+                                android:layout_marginTop="87dp"
                                 android:text="Introduction to Computing"
-                                android:textColor="#ffff"
+                                android:textColor="@color/white"
                                 android:textSize="22sp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignTop="@+id/TitleCC101"
-                                android:layout_marginTop="-26dp"
+                                android:layout_marginTop="33dp"
                                 android:text="HTML, CSS"
-                                android:textColor="#ffff"
-                                android:textSize="22sp"
+                                android:textColor="@color/white"
+                                android:textSize="20sp"
                                 android:textStyle="bold" />
 
                         </RelativeLayout>
@@ -133,9 +133,9 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@+id/ClassCC102"
-                                android:layout_marginTop="116dp"
+                                android:layout_marginTop="88dp"
                                 android:text="Fundamentals of Programming"
-                                android:textColor="@color/white"
+                                android:textColor="@color/teal_200"
                                 android:textSize="22sp"
                                 android:textStyle="normal" />
 
@@ -143,10 +143,10 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@+id/ClassCC102"
-                                android:layout_marginTop="88dp"
+                                android:layout_marginTop="120dp"
                                 android:text="JAVA"
-                                android:textColor="@color/white"
-                                android:textSize="22sp"
+                                android:textColor="@color/teal_200"
+                                android:textSize="20sp"
                                 android:textStyle="bold" />
 
                         </RelativeLayout>
@@ -191,7 +191,7 @@
                                 android:layout_below="@+id/ClassDS101"
                                 android:layout_marginTop="113dp"
                                 android:text="Discrete Structure 1"
-                                android:textColor="#ffff"
+                                android:textColor="@color/white"
                                 android:textSize="22sp"
                                 android:textStyle="bold" />
                         </RelativeLayout>
@@ -234,7 +234,7 @@
                                 android:layout_below="@+id/ClassAL101"
                                 android:layout_marginTop="115dp"
                                 android:text="Algorithms"
-                                android:textColor="@color/black"
+                                android:textColor="@color/teal_700"
                                 android:textSize="22sp"
                                 android:textStyle="bold" />
                         </RelativeLayout>
@@ -282,9 +282,9 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@+id/ClassCC103"
-                                android:layout_marginTop="116dp"
+                                android:layout_marginTop="93dp"
                                 android:text="Intermediate Programming"
-                                android:textColor="@color/white"
+                                android:textColor="@color/teal_200"
                                 android:textColorHighlight="@color/black"
                                 android:textSize="22sp" />
 
@@ -292,9 +292,9 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@+id/ClassCC103"
-                                android:layout_marginTop="94dp"
+                                android:layout_marginTop="124dp"
                                 android:text="Advance Java"
-                                android:textColor="@color/white"
+                                android:textColor="@color/teal_200"
                                 android:textSize="22sp"
                                 android:textStyle="bold" />
 
@@ -339,7 +339,7 @@
                                 android:layout_below="@id/ClassCC104"
                                 android:layout_marginTop="112dp"
                                 android:text="Data Structures and Algorithms"
-                                android:textColor="@color/black"
+                                android:textColor="@color/teal_700"
                                 android:textSize="22sp"
                                 android:textStyle="bold" />
 
@@ -439,7 +439,7 @@
                                 android:layout_below="@id/ClassDS102"
                                 android:layout_marginTop="112dp"
                                 android:text="Discrete Structure 2"
-                                android:textColor="@color/white"
+                                android:textColor="@color/teal_200"
                                 android:textSize="22sp"
                                 android:textStyle="bold" />
 
@@ -524,9 +524,9 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@+id/ClassSDF104"
-                                android:layout_marginTop="111dp"
+                                android:layout_marginTop="87dp"
                                 android:text="Object Oriented Programming 1"
-                                android:textColor="@color/purple_700"
+                                android:textColor="@color/white"
                                 android:textSize="22sp"
                                 android:textStyle="bold" />
 
@@ -535,8 +535,10 @@
                                 android:layout_height="wrap_content"
                                 android:layout_below="@id/TitleSDF104"
                                 android:text="VB.net"
+                                android:textColor="@color/white"
                                 android:textSize="20sp"
                                 android:textStyle="bold" />
+
                         </RelativeLayout>
                     </androidx.cardview.widget.CardView>
 
@@ -619,7 +621,7 @@
                                 android:layout_below="@+id/ClassNC101"
                                 android:layout_marginTop="116dp"
                                 android:text="Networks and Communication"
-                                android:textColor="#131111"
+                                android:textColor="@color/teal_700"
                                 android:textSize="22sp"
                                 android:textStyle="bold" />
                         </RelativeLayout>
@@ -662,7 +664,7 @@
                                 android:layout_below="@+id/ClassAR101"
                                 android:layout_marginTop="114dp"
                                 android:text="Architecture and Organization"
-                                android:textColor="@color/white"
+                                android:textColor="@color/teal_200"
                                 android:textSize="22sp"
                                 android:textStyle="bold" />
                         </RelativeLayout>

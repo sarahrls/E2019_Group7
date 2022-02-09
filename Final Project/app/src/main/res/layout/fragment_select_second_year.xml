@@ -49,7 +49,7 @@
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
-                        android:background="@drawable/cc106"
+                        android:background="@drawable/emergingtech"
                         android:orientation="vertical"
                         android:paddingLeft="20dp"
                         android:paddingTop="20dp"
@@ -75,18 +75,9 @@
                             android:layout_below="@+id/ClassCC106"
                             android:layout_marginTop="94dp"
                             android:text="Application Development and Emerging Technology"
-                            android:textColor="#DD000000"
-                            android:textSize="22sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/TitleCC106"
-                            android:text=""
-                            android:textSize="20sp"
+                            android:textColor="@color/white"
+                            android:textSize="22sp"
                             android:textStyle="bold" />
-
-
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -125,16 +116,18 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@+id/ClassSDF104"
-                            android:layout_marginTop="111dp"
+                            android:layout_marginTop="95dp"
                             android:text="Object Oriented Programming 1"
                             android:textColor="#ffff"
-                            android:textSize="22sp" />
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/TitleSDF104"
                             android:text="VB.net"
+                            android:textColor="@color/white"
                             android:textSize="20sp"
                             android:textStyle="bold" />
 
@@ -178,7 +171,8 @@
                             android:layout_marginTop="82dp"
                             android:text="Automata Theory and Formal Languages"
                             android:textColor="#000000"
-                            android:textSize="22sp" />
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -227,7 +221,8 @@
                             android:layout_marginTop="116dp"
                             android:text="Networks and Communication"
                             android:textColor="#131111"
-                            android:textSize="22sp" />
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -293,14 +288,7 @@
                             android:layout_marginTop="114dp"
                             android:text="Architecture and Organization"
                             android:textColor="#ffff"
-                            android:textSize="22sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/TitleAR101"
-                            android:text=""
-                            android:textSize="20sp"
+                            android:textSize="22sp"
                             android:textStyle="bold" />
 
                     </RelativeLayout>
@@ -344,14 +332,7 @@
                             android:layout_marginTop="115dp"
                             android:text="Operating System"
                             android:textColor="#ffff"
-                            android:textSize="22sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/TitleOS101"
-                            android:text=""
-                            android:textSize="20sp"
+                            android:textSize="22sp"
                             android:textStyle="bold" />
 
                     </RelativeLayout>
@@ -395,15 +376,9 @@
                             android:layout_marginTop="121dp"
                             android:text="Programming Languages"
                             android:textColor="#ffff"
-                            android:textSize="22sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/TitlePL101"
-                            android:text=""
-                            android:textSize="20sp"
+                            android:textSize="22sp"
                             android:textStyle="bold" />
+
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -445,16 +420,8 @@
                             android:layout_marginTop="117dp"
                             android:text="Human Computer Interactions"
                             android:textColor="#ffff"
-                            android:textSize="22sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/TitleHCI101"
-                            android:text=""
-                            android:textSize="20sp"
+                            android:textSize="22sp"
                             android:textStyle="bold" />
-
 
                     </RelativeLayout>
 
@@ -498,16 +465,8 @@
                             android:layout_marginTop="112dp"
                             android:text="Logic Design"
                             android:textColor="#000000"
-                            android:textSize="22sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/TitleAl103"
-                            android:text=""
-                            android:textSize="20sp"
+                            android:textSize="22sp"
                             android:textStyle="bold" />
-
                     </RelativeLayout>
 
                 </androidx.cardview.widget.CardView>

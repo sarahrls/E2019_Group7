@@ -7,19 +7,6 @@
     tools:context=".settings">
 
     <RelativeLayout
-        android:layout_width="65dp"
-        android:layout_height="50dp"
-        android:background="@drawable/ic_round_arrow_back_24"
-        app:layout_constraintBottom_toTopOf="@+id/relativeLayout2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.037"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
-
-    </RelativeLayout>
-
-    <RelativeLayout
         android:id="@+id/relativeLayout2"
         android:layout_width="385dp"
         android:layout_height="60dp"
@@ -27,7 +14,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.089">
+        app:layout_constraintVertical_bias="0.049">
 
         <TextView
             android:id="@+id/textView11"
@@ -66,8 +53,9 @@
 
                 <RelativeLayout
                     android:layout_width="50dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="45dp"
                     android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
                     android:background="@drawable/ic_round_person_outline_24"
                     android:backgroundTint="@color/purple_200">
 
@@ -186,8 +174,9 @@
 
                 <RelativeLayout
                     android:layout_width="50dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="45dp"
                     android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
                     android:background="@drawable/ic_round_notifications_24"
                     android:backgroundTint="@color/purple_200">
 
@@ -275,8 +264,9 @@
 
                 <RelativeLayout
                     android:layout_width="50dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="45dp"
                     android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
                     android:background="@drawable/ic_round_help_outline_24"
                     android:backgroundTint="@color/purple_200">
 
