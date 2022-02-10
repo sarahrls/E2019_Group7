@@ -1,16 +1,22 @@
 package com.example.knowtech;
 
+import android.app.Notification;
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
@@ -23,10 +29,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class Rooms extends AppCompatActivity {
+public class Rooms extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+
+    DrawerLayout drawerLayout;
+    ActionBarDrawerToggle toggle;
+    NavigationView navigationView;
+
     selectYear YearAction;
     selectFirstYear FirstYearAction;
     selectSecondYear SecondYearAction;
@@ -34,6 +46,7 @@ public class Rooms extends AppCompatActivity {
     selectFourthYear FourthYearAction;
     Spinner spinner;
     List<String> names;
+    private MenuItem item;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +67,20 @@ public class Rooms extends AppCompatActivity {
         names.add("Third Year");
         names.add("Fourth Year");
 
+        //NAVIGATION
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.white)));
 
+        drawerLayout = findViewById(R.id.drawableLayout);
+        navigationView = findViewById(R.id.navigationview);
+
+        toggle = new ActionBarDrawerToggle(this,drawerLayout,R.string.navigation_open,R.string.navigation_close);
+        drawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        navigationView.setNavigationItemSelectedListener(this);
+
+        //SPINNER
         ArrayAdapter<String> arrayAdapter=new ArrayAdapter<>(Rooms.this, R.layout.item, names);
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(arrayAdapter);
@@ -95,5 +121,71 @@ public class Rooms extends AppCompatActivity {
         FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.RoomsFrameLayout,fragment);
         fragmentTransaction.commit();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item){
+        if(toggle.onOptionsItemSelected(item))
+            return true;
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.nav_rooms:
+                Toast.makeText(this,"Rooms", Toast.LENGTH_SHORT).show();
+                int rooms = item.getItemId();
+
+                if(rooms == R.id.nav_rooms){
+
+                    Intent intent = new Intent(Rooms.this,Rooms.class);
+                    startActivity(intent);
+
+                    return true;
+                }
+                break;
+            case R.id.nav_profile:
+                Toast.makeText(this,"Profile", Toast.LENGTH_SHORT).show();
+                int profile= item.getItemId();
+
+                if(profile == R.id.nav_profile){
+
+                    Intent intent = new Intent(Rooms.this,Activity_Profile.class);
+                    startActivity(intent);
+
+                    return true;
+                }
+                break;
+            case R.id.nav_notifications:
+                Toast.makeText(this,"Notification", Toast.LENGTH_SHORT).show();
+                int Notification = item.getItemId();
+
+                if(Notification == R.id.nav_notifications){
+
+                    Intent intent = new Intent(Rooms.this,Notifications.class);
+                    startActivity(intent);
+
+                    return true;
+                }
+                break;
+            case R.id.nav_settings:
+                Toast.makeText(this,"Setting", Toast.LENGTH_SHORT).show();
+                int Settings = item.getItemId();
+
+                if(Settings == R.id.nav_settings){
+
+                    Intent intent = new Intent(Rooms.this,settings.class);
+                    startActivity(intent);
+
+                    return true;
+                }
+                break;
+
+            default:
+                throw new IllegalStateException("Unexpected value: " + item.getItemId());
+        }
+
+        return true;
     }
 }

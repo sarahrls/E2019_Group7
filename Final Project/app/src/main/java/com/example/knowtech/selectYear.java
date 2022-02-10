@@ -25,7 +25,7 @@ public class selectYear extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        CardView RoomCC101 = view.findViewById(R.id.RoomCC101_Card);
+        //CardView RoomCC101 = view.findViewById(R.id.RoomCC101_Card);
         CardView RoomCC102 = view.findViewById(R.id.RoomCC102_Card);
         CardView RoomDS101 = view.findViewById(R.id.RoomDS101_Card);
         CardView RoomAL101 = view.findViewById(R.id.RoomAL101_Card);
@@ -36,7 +36,7 @@ public class selectYear extends Fragment {
         CardView RoomDS102 = view.findViewById(R.id.RoomDS102_Card);
 
 
-        RoomCC101.setOnClickListener(new Clik());
+        //RoomCC101.setOnClickListener(new Clik());
         RoomCC102.setOnClickListener(new Clik());
         RoomDS101.setOnClickListener(new Clik());
         RoomAL101.setOnClickListener(new Clik());

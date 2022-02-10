@@ -7,52 +7,25 @@
     tools:context=".settings">
 
     <RelativeLayout
+        android:id="@+id/relativeLayout3"
         android:layout_width="65dp"
         android:layout_height="50dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/ic_round_arrow_back_24"
-        app:layout_constraintBottom_toTopOf="@+id/relativeLayout2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.037"
+        app:layout_constraintHorizontal_bias="0.046"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintTop_toTopOf="parent">
 
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/relativeLayout2"
-        android:layout_width="385dp"
-        android:layout_height="60dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.089">
-
-        <TextView
-            android:id="@+id/textView11"
-            android:layout_width="166dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="7dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginEnd="212dp"
-            android:layout_marginBottom="-1dp"
-            android:text="Settings"
-            android:textSize="40dp"
-            android:textStyle="bold" />
     </RelativeLayout>
 
     <ScrollView
+        android:id="@+id/scrollView3"
         android:layout_width="385dp"
-        android:layout_height="611dp"
+        android:layout_height="675dp"
         android:layout_marginStart="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -84,7 +57,7 @@
                     android:layout_marginEnd="193dp"
                     android:layout_marginBottom="3dp"
                     android:text="Account"
-                    android:textSize="25dp"
+                    android:textSize="25sp"
                     android:textStyle="bold" />
             </RelativeLayout>
 
@@ -187,7 +160,7 @@
                 <RelativeLayout
                     android:layout_width="50dp"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
                     android:background="@drawable/ic_round_notifications_24"
                     android:backgroundTint="@color/purple_200">
 
@@ -214,7 +187,7 @@
                     android:id="@+id/textView33"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
                     android:layout_marginTop="15dp"
                     android:text="Silent mode"
                     android:textSize="18dp" />
@@ -238,7 +211,7 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="15dp"
                     android:text="Vibrate"
-                    android:textSize="18dp" />
+                    android:textSize="18sp" />
 
                 <Switch
                     android:id="@+id/switch2"
@@ -294,6 +267,7 @@
                     android:textSize="25dp"
                     android:textStyle="bold" />
             </RelativeLayout>
+
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="35dp">
@@ -302,7 +276,7 @@
                     android:id="@+id/textView37"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
                     android:layout_marginTop="5dp"
                     android:text="Help and Support"
                     android:textSize="18dp" />
@@ -316,6 +290,7 @@
 
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="35dp">
@@ -338,6 +313,7 @@
 
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="35dp">
@@ -346,20 +322,21 @@
                     android:id="@+id/textView39"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
                     android:layout_marginTop="5dp"
                     android:text="Privacy Policy"
-                    android:textSize="18dp" />
+                    android:textSize="18sp" />
 
                 <RelativeLayout
                     android:layout_width="30dp"
                     android:layout_height="25dp"
-                    android:layout_marginLeft="350dp"
+                    android:layout_marginStart="350dp"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/ic_round_arrow_forward_ios_24">
 
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="35dp">
@@ -371,12 +348,12 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="5dp"
                     android:text="Code of Conduct"
-                    android:textSize="18dp" />
+                    android:textSize="18sp" />
 
                 <RelativeLayout
                     android:layout_width="30dp"
                     android:layout_height="25dp"
-                    android:layout_marginLeft="350dp"
+                    android:layout_marginStart="350dp"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/ic_round_arrow_forward_ios_24">
 
@@ -385,7 +362,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dp" >
+                android:layout_height="60dp">
 
                 <Button
                     android:id="@+id/button4"
@@ -420,6 +397,24 @@
             </RelativeLayout>
         </LinearLayout>
     </ScrollView>
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="166dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="162dp"
+        android:layout_marginBottom="58dp"
+        android:text="Settings"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/relativeLayout3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.062" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

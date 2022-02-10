@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 
 public class getStarted extends AppCompatActivity {
@@ -13,18 +12,10 @@ public class getStarted extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_get_started);
-        getSupportActionBar().hide();
-        Button btn_getStarted = (Button) findViewById(R.id.btn_getStarted);
-
-        btn_getStarted.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent int1 =new Intent(getStarted.this,Signup.class);
-                startActivity(int1);
-            }
+        Button btn_getStarted = findViewById(R.id.btn_getStarted);
+        btn_getStarted.setOnClickListener(v -> {
+            Intent int1 =new Intent(getStarted.this,Signin.class);
+            startActivity(int1);
         });
-
-
-
     }
 }

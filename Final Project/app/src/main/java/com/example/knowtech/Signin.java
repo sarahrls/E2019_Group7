@@ -1,144 +1,175 @@
 package com.example.knowtech;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.app.Activity;
-import android.app.ProgressDialog;
-import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
-import android.content.SharedPreferences;
-import android.graphics.Color;
-import android.os.AsyncTask;
-import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.google.android.material.textfield.TextInputEditText;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-import java.util.ArrayList;
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
 
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
+import org.json.JSONObject;
+
+import java.util.HashMap;
 
 public class Signin extends AppCompatActivity {
-
-    TextInputEditText Email, Pass;
-    TextView signup;
-    Button signin;
-
-
-    JSONParser jsonParser = new JSONParser();
+    private Button signinBtn;
+    private EditText email, password;
+    private TextView forgot, createAnAccount;
+    private String signInUrl = "https://knowtech-study.000webhostapp.com/SignIn.php";
+    private Tool TOOL = new Tool(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signin);
 
-        Email = findViewById(R.id.edit_email);
-        Pass = findViewById(R.id.edit_password);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
 
-        getSupportActionBar().hide();
+        signinBtn = findViewById(R.id.Log_Signin);
+        email = findViewById(R.id.edit_email);
+        password = findViewById(R.id.edit_password);
+        forgot = findViewById(R.id.forgotPassword);
+        createAnAccount = findViewById(R.id.reg_signup);
 
-        signup = (TextView) findViewById(R.id.reg_signup);
-        signup.setOnClickListener(new View.OnClickListener() {
+        TextWatcher watcher = new TextWatcher() {
             @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Signin.this,Signup.class);
-                startActivity(intent);
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {}
 
-                finish();
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                disableEnableButton();
             }
-        });
 
-        signin = (Button) findViewById(R.id.Log_Signin);
-        signin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void afterTextChanged(Editable editable) {
+                disableEnableButton();
+            }
+        };
+
+        email.addTextChangedListener(watcher);
+        password.addTextChangedListener(watcher);
+        signinBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                if (Email.getText().toString().equals("")) {
-                    Toast.makeText(Signin.this, "Please Enter Email", Toast.LENGTH_SHORT).show();
-                } /*else if (!emailValidator(inputEmail.getText().toString())) {
-                    Toast.makeText(MainActivity.this, "Please Field Valid Email", Toast.LENGTH_SHORT).show();
-                }*/ else if (Pass.getText().toString().equals("")) {
-                    Toast.makeText(Signin.this, "Please Enter Password", Toast.LENGTH_SHORT).show();
-                } else {
-                    login();
+                if (verifyForm()) {
+                    goSignIn();
                 }
             }
         });
-    }
 
-    public static void hideSoftKeyboard(Activity activity) {
-        InputMethodManager inputMethodManager =
-                (InputMethodManager) activity.getSystemService(
-                        Activity.INPUT_METHOD_SERVICE);
-        inputMethodManager.hideSoftInputFromWindow(
-                activity.getCurrentFocus().getWindowToken(), 0);
-    }
-
-
-    private void login() {
-
-        final ProgressDialog progressDialog = new ProgressDialog(Signin.this);
-        progressDialog.setTitle("Please wait");
-        progressDialog.setMessage("Logging in...");
-        progressDialog.setCancelable(false);
-        progressDialog.show();
-        NetworkService networkService = NetworkClient.getClient().create(NetworkService.class);
-        Call<LoginResponseModel> login = networkService.login(Email.getText().toString(), Pass.getText().toString());
-        login.enqueue(new Callback<LoginResponseModel>() {
+        createAnAccount.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onResponse(@NonNull Call<LoginResponseModel> call, @NonNull Response<LoginResponseModel> response) {
-                LoginResponseModel responseBody = response.body();
-                if (responseBody != null) {
-                    if (responseBody.getSuccess().equals("1")) {
-                        SharedPreferences preferences = getSharedPreferences(Constants.PREFERENCE_NAME, MODE_PRIVATE);
-                        SharedPreferences.Editor editor = preferences.edit();
-                        editor.putBoolean(Constants.KEY_ISE_LOGGED_IN, true);
-                        editor.putString(Constants.KEY_USERNAME, responseBody.getUserDetailObject().getUserDetails().get(0).getUsername() + " " + responseBody.getUserDetailObject().getUserDetails().get(0).getPassword());
-                        /*editor.putString(Constants.KEY_LASTNAME, responseBody.getUserDetailObject().getUserDetails().get(0).getLastName());*/
-                        editor.putString(Constants.KEY_EMAIL, responseBody.getUserDetailObject().getUserDetails().get(0).getEmail());
-                        editor.apply();
-                        Toast.makeText(Signin.this, responseBody.getMessage(), Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(getApplicationContext(),Rooms.class));
-                        finish();
-                    } else {
-                        Toast.makeText(Signin.this, responseBody.getMessage(), Toast.LENGTH_SHORT).show();
+            public void onClick(View view) {
+                TOOL.startNewActivity(Signup.class);
+            }
+        });
+
+        disableEnableButton();
+    }
+
+
+
+    public void disableEnableButton() {
+        boolean status = true;
+        String _email = TOOL.getValueFromInput(email);
+        String _password = TOOL.getValueFromInput(password);
+
+        if (_email.length() == 0) {
+            status = false;
+        }
+
+        if (_password.length() == 0) {
+            status = false;
+        }
+
+        signinBtn.setEnabled(status);
+    }
+
+    public boolean verifyForm() {
+        boolean status = true;
+        String _email = TOOL.getValueFromInput(email);
+        String _password = TOOL.getValueFromInput(password);
+
+        if (_email.length() == 0) {
+            email.setError("Email is Required");
+            email.requestFocus();
+            status = false;
+        } else {
+            email.setError(null);
+        }
+
+        if (!TOOL.isValidEmailAddress(_email)) {
+            email.setError("Please enter a valid Email Address");
+            email.requestFocus();
+            status = false;
+        } else {
+            email.setError(null);
+        }
+
+        if (_password.length() == 0) {
+            password.setError("Password is Required");
+            password.requestFocus();
+            status = false;
+        }else {
+            password.setError(null);
+        }
+
+        return status;
+    }
+
+    private void enableForm(Boolean bool) {
+        signinBtn.setEnabled(bool);
+        email.setEnabled(bool);
+        password.setEnabled(bool);
+    }
+
+    private void goSignIn() {
+        enableForm(false);
+        HashMap<String, String> params = new HashMap<String, String>();
+        params.put("email", TOOL.getValueFromInput(email));
+        params.put("password", TOOL.getValueFromInput(password));
+
+        if (TOOL.isInternetConnectionAvailable()) {
+            TOOL.Ajax(signInUrl, Request.Method.POST, params, new Response.Listener<String>() {
+                @Override
+                public void onResponse(String response) {
+                    try {
+                        JSONObject obj = new JSONObject(response);
+
+                        TOOL.ToastText(obj.getString("message"));
+
+                        if (obj.getBoolean("success")) {
+                            TOOL.createSession(obj.getJSONObject("object"));
+                        } else {
+                            enableForm(true);
+                            verifyForm();
+                        }
+                    } catch (Exception error) {
+                        TOOL.ToastText(error.getMessage());
+                        enableForm(true);
+                        verifyForm();
                     }
                 }
-                progressDialog.dismiss();
-            }
-
-            @Override
-            public void onFailure(@NonNull Call<LoginResponseModel> call, @NonNull Throwable t) {
-                progressDialog.dismiss();
-            }
-        });
-    }
-
-    public boolean emailValidator(String email) {
-        Pattern pattern;
-        Matcher matcher;
-        final String EMAIL_PATTERN = "^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
-        pattern = Pattern.compile(EMAIL_PATTERN);
-        matcher = pattern.matcher(email);
-        return matcher.matches();
+            }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    TOOL.ToastText(error.getMessage());
+                    enableForm(true);
+                }
+            });
+        } else {
+            TOOL.ToastText("No Internet, Please check your internet connection!");
+        }
     }
 }
-
-
-
-
-
-
-
 
 

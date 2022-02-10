@@ -5,46 +5,45 @@
     android:layout_height="wrap_content">
 
     <LinearLayout
+        android:id="@+id/linear_ll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:id="@+id/linear_ll"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:padding="10dp">
 
         <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/ic_arrow_back"
-            android:layout_alignParentLeft="true"/>
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/ic_arrow_back" />
 
         <TextView
-            android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Account Settings"
-            android:textSize="16dp"
+            android:layout_weight="1"
             android:gravity="center"
-            android:textStyle="bold"
-            android:textColor="@android:color/black" />
+            android:text="Account Settings"
+            android:textColor="@android:color/black"
+            android:textSize="16dp"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
             android:text="Logout"
             android:textColor="@color/purple_200"
-            android:layout_alignParentRight="true"
-            android:textStyle="bold"
             android:textSize="15dp"
-            />
+            android:textStyle="bold" />
 
     </LinearLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
-        android:background="@color/purple_200"
         android:layout_below="@+id/linear_ll"
-        android:paddingRight="8dp"
-        android:paddingLeft="8dp"/>
+        android:background="@color/purple_200"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp" />
 
 </RelativeLayout>

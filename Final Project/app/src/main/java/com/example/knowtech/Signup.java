@@ -1,153 +1,190 @@
 package com.example.knowtech;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
-
-import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.Handler;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
-import android.app.ProgressDialog;
 import android.widget.EditText;
-import android.widget.ProgressBar;
-import android.widget.TextView;
-import android.util.Log;
 import android.widget.Toast;
 
-import com.google.android.material.textfield.TextInputEditText;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 
-import com.android.volley.AuthFailureError;
+import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
-
-import com.android.volley.Response.ErrorListener;
+import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
-
+import org.json.JSONObject;
 
 import java.util.HashMap;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 import java.util.Map;
-
-
-
-
-import java.util.ArrayList;
 
 public class Signup extends AppCompatActivity {
 
-    TextView reg_register;
-    TextInputEditText Username, Email, Password;
-    Button register;
-
-    String URL = "https://knowtech-study-room.000webhostapp.com/register.php";
-    JSONParser jsonParser = new JSONParser();
-
-    int i = 0;
+    private Button signUpBtn;
+    private EditText email, password,confirmPassword;
+    private String emailExistUrl = "https://knowtech-study.000webhostapp.com/isEmailExist.php";
+    private Tool TOOL = new Tool(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
 
-        getSupportActionBar().hide();
+        signUpBtn = findViewById(R.id.SignUp);
+        email = findViewById(R.id.reg_email);
+        password = findViewById(R.id.reg_password);
+        confirmPassword = findViewById(R.id.reg_confirmpassword);
 
-        Username = findViewById(R.id.edit_username);
-        Email = findViewById(R.id.edit_email);
-        Password = findViewById(R.id.edit_password);
-
-        reg_register = (TextView) findViewById(R.id.reg_signin);
-        reg_register.setOnClickListener(new View.OnClickListener() {
+        TextWatcher watcher = new TextWatcher() {
             @Override
-            public void onClick(View view) {
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {}
 
-                Intent text = new Intent(Signup.this, Signin.class);
-                startActivity(text);
-                finish();
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                disableEnableButton();
             }
-        });
 
+            @Override
+            public void afterTextChanged(Editable editable) {
+                disableEnableButton();
+            }
+        };
 
-        register = (Button) findViewById(R.id.btn_register);
-        register.setOnClickListener(new View.OnClickListener() {
+        email.addTextChangedListener(watcher);
+        password.addTextChangedListener(watcher);
+        confirmPassword.addTextChangedListener(watcher);
+
+        signUpBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                if (Username.getText().toString().equals("")) {
-                    Toast.makeText(Signup.this, "Enter username", Toast.LENGTH_SHORT).show();
-                } else if (Email.getText().toString().equals("")) {
-                    Toast.makeText(Signup.this, "Enter email", Toast.LENGTH_SHORT).show();
-                } else if (Password.getText().toString().equals("")) {
-                    Toast.makeText(Signup.this, "Enter password", Toast.LENGTH_SHORT).show();
-                } else {
-
-                    HashMap<String, String> params = new HashMap<>();
-                    params.put("username", Username.getText().toString());
-                    params.put("email", Email.getText().toString());
-                    params.put("password", Password.getText().toString());
-                    register(params);
+                if (verifyForm()) {
+                    checkIfEmailExist();
                 }
-
             }
-
         });
 
+        disableEnableButton();
     }
-/*
-    public boolean emailValidator(String email) {
-        Pattern pattern;
-        Matcher matcher;
-        final String EMAIL_PATTERN = "^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
-        pattern = Pattern.compile(EMAIL_PATTERN);
-        matcher = pattern.matcher(email);
-        return matcher.matches();
-    }*/
 
-    private void register(HashMap<String, String> params) {
+    public void disableEnableButton() {
+        boolean status = true;
+        String _email = TOOL.getValueFromInput(email);
+        String _password = TOOL.getValueFromInput(password);
+        String _confirm = TOOL.getValueFromInput(confirmPassword);
 
-        final ProgressDialog progressDialog = new ProgressDialog(Signup.this);
-        progressDialog.setTitle("Please wait");
-        progressDialog.setMessage("Registering...");
-        progressDialog.setCancelable(false);
-        progressDialog.show();
+        if (_email.length() == 0) {
+            status = false;
+        }
 
-        NetworkService networkService = NetworkClient.getClient().create(NetworkService.class);
-        Call<RegistrationResponseModel> registerCall = networkService.register(params);
-        registerCall.enqueue(new Callback<RegistrationResponseModel>() {
-            @Override
-            public void onResponse(@NonNull Call<RegistrationResponseModel> call, @NonNull Response<RegistrationResponseModel> response) {
-                RegistrationResponseModel responseBody = response.body();
-                if (responseBody != null) {
-                    if (responseBody.getSuccess().equals("1")) {
-                        Toast.makeText(Signup.this, responseBody.getMessage(), Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(Signup.this, Signin.class);
-                        startActivity(intent);
-                        finish();
-                    } else {
-                        Toast.makeText(Signup.this, responseBody.getMessage(), Toast.LENGTH_SHORT).show();
+        if (_password.length() == 0) {
+            status = false;
+        }
+
+        if (_password.length() < 8) {
+            status = false;
+        }
+
+        if (_confirm.length() == 0) {
+            status = false;
+        }
+
+        if (!_password.equals(_confirm)) {
+            status = false;
+        }
+
+        signUpBtn.setEnabled(status);
+    }
+
+    public boolean verifyForm() {
+        boolean status = true;
+        String _email = TOOL.getValueFromInput(email);
+        String _password = TOOL.getValueFromInput(password);
+        String _confirm = TOOL.getValueFromInput(confirmPassword);
+
+        if (_email.length() == 0) {
+            email.setError("Email is Required");
+            email.requestFocus();
+            status = false;
+        } else {
+            email.setError(null);
+        }
+
+        if (_password.length() == 0) {
+            password.setError("Password is Required");
+            password.requestFocus();
+            status = false;
+        }else {
+            password.setError(null);
+        }
+
+        if (_password.length() < 8) {
+            password.setError("Password should be at-least of 8 characters");
+            password.requestFocus();
+            status = false;
+        }else {
+            password.setError(null);
+        }
+
+        if (_confirm.length() == 0) {
+            confirmPassword.setError("Please confirm your password!");
+            confirmPassword.requestFocus();
+            status = false;
+        }else {
+            confirmPassword.setError(null);
+        }
+
+        if (!_password.equals(_confirm)) {
+            confirmPassword.setError("Password did not matched");
+            confirmPassword.requestFocus();
+            status = false;
+        }else {
+            confirmPassword.setError(null);
+        }
+
+        return status;
+    }
+
+    private void checkIfEmailExist() {
+        HashMap<String, String> params = new HashMap<String, String>();
+        params.put("email", email.getText().toString());
+
+        if (TOOL.isInternetConnectionAvailable()) {
+            TOOL.Ajax(emailExistUrl, Request.Method.POST, params, new Response.Listener<String>() {
+                @Override
+                public void onResponse(String response) {
+                    try {
+                        JSONObject obj = new JSONObject(response);
+
+                        TOOL.ToastText(obj.getString("message"));
+
+                        if (obj.getInt("status") == 202) {
+                            Bundle bundle = new Bundle();
+                            bundle.putString("email", TOOL.getValueFromInput(email));
+                            bundle.putString("password", TOOL.getValueFromInput(password));
+                            TOOL.startNewActivityWBundle(customize_profile.class, bundle);
+                        }
+
+                    } catch (Exception e) {
+                        Toast.makeText(Signup.this, e.getMessage().toString(), Toast.LENGTH_SHORT).show();
                     }
                 }
-                progressDialog.dismiss();
-            }
-
-            @Override
-            public void onFailure(@NonNull Call<RegistrationResponseModel> call, @NonNull Throwable t) {
-                progressDialog.dismiss();
-            }
-        });
-            }
+            }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    Toast.makeText(Signup.this, error.getMessage().toString(), Toast.LENGTH_SHORT).show();
+                }
+            });
+        } else {
+            TOOL.ToastText("No Internet, Please check your internet connection!");
+        }
 
     }
-
-
-
+}
