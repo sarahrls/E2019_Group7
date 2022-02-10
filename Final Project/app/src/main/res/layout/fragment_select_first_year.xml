@@ -77,16 +77,17 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@+id/ClassCC101"
-                                android:layout_marginTop="112dp"
+                                android:layout_marginTop="95dp"
                                 android:text="Introduction to Computing"
                                 android:textColor="#ffff"
-                                android:textSize="22sp" />
+                                android:textSize="22sp"
+                                android:textStyle="bold" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignTop="@+id/TitleCC101"
-                                android:layout_marginTop="-26dp"
+                                android:layout_marginTop="30dp"
                                 android:text="HTML, CSS"
                                 android:textColor="#ffff"
                                 android:textSize="20sp"
@@ -132,17 +133,17 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@+id/ClassCC102"
-                                android:layout_marginTop="116dp"
+                                android:layout_marginTop="87dp"
                                 android:text="Fundamentals of Programming"
                                 android:textColor="#ffff"
                                 android:textSize="22sp"
-                                android:textStyle="normal" />
+                                android:textStyle="normal|bold" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@+id/ClassCC102"
-                                android:layout_marginTop="88dp"
+                                android:layout_marginTop="119dp"
                                 android:text="JAVA"
                                 android:textColor="#ffff"
                                 android:textSize="20sp"
@@ -191,7 +192,8 @@
                                 android:layout_marginTop="113dp"
                                 android:text="Discrete Structure 1"
                                 android:textColor="#ffff"
-                                android:textSize="22sp" />
+                                android:textSize="22sp"
+                                android:textStyle="bold" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -243,7 +245,8 @@
                                 android:layout_below="@+id/ClassAL101"
                                 android:layout_marginTop="115dp"
                                 android:text="Algorithms"
-                                android:textSize="22sp" />
+                                android:textSize="22sp"
+                                android:textStyle="bold" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -309,7 +312,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@+id/ClassCC103"
-                                android:layout_marginTop="124dp"
+                                android:layout_marginTop="91dp"
                                 android:text="Intermediate Programming"
                                 android:textColor="#ffff"
                                 android:textSize="22sp" />
@@ -318,7 +321,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@+id/ClassCC103"
-                                android:layout_marginTop="59dp"
+                                android:layout_marginTop="121dp"
                                 android:text="Advance Java"
                                 android:textColor="#FFFFFF"
                                 android:textSize="20sp"
@@ -366,7 +369,8 @@
                                 android:layout_below="@+id/ClassCC104"
                                 android:layout_marginTop="107dp"
                                 android:text="Data Structures and Algorithms"
-                                android:textSize="22sp" />
+                                android:textSize="22sp"
+                                android:textStyle="bold" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -418,7 +422,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_below="@+id/ClassCC105"
 
-                                android:layout_marginTop="117dp"
+                                android:layout_marginTop="85dp"
                                 android:text="Information Management"
                                 android:textColor="#FFFF"
                                 android:textSize="22sp" />
@@ -427,7 +431,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@+id/ClassCC105"
-                                android:layout_marginTop="87dp"
+                                android:layout_marginTop="115dp"
                                 android:text="Database, SQL"
                                 android:textColor="#FFFF"
                                 android:textSize="20sp"
@@ -476,7 +480,8 @@
                                 android:layout_marginTop="112dp"
                                 android:text="Discrete Structure 2"
                                 android:textColor="#ffff"
-                                android:textSize="22sp" />
+                                android:textSize="22sp"
+                                android:textStyle="bold" />
 
                             <TextView
                                 android:layout_width="wrap_content"

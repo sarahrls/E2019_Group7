@@ -6,32 +6,31 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+
 import android.view.Menu;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.google.android.material.snackbar.Snackbar;
+
+
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.cardview.widget.CardView;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
+
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
-
-
-
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import java.util.ArrayList;
 import java.util.List;
+
 
 public class Rooms extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -47,6 +46,7 @@ public class Rooms extends AppCompatActivity implements NavigationView.OnNavigat
     Spinner spinner;
     List<String> names;
     private MenuItem item;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -88,7 +88,7 @@ public class Rooms extends AppCompatActivity implements NavigationView.OnNavigat
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                switch (position){
+                switch (position) {
                     case 0:
                         selectFragment(YearAction);
                         break;
@@ -111,81 +111,75 @@ public class Rooms extends AppCompatActivity implements NavigationView.OnNavigat
             public void onNothingSelected(AdapterView<?> parent) {
 
             }
-        });
+
+            private void selectFragment(Fragment fragment) {
+                FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.RoomsFrameLayout, fragment);
+                fragmentTransaction.commit();
+            }
 
 
-
+            });
     }
 
-    private void selectFragment(Fragment fragment) {
-        FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.RoomsFrameLayout,fragment);
-        fragmentTransaction.commit();
-    }
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.nav_rooms:
+                        Toast.makeText(this, "Rooms", Toast.LENGTH_SHORT).show();
+                        int rooms = item.getItemId();
 
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item){
-        if(toggle.onOptionsItemSelected(item))
-            return true;
-        return super.onOptionsItemSelected(item);
-    }
+                        if (rooms == R.id.nav_rooms) {
 
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.nav_rooms:
-                Toast.makeText(this,"Rooms", Toast.LENGTH_SHORT).show();
-                int rooms = item.getItemId();
+                            Intent intent = new Intent(Rooms.this, Rooms.class);
+                            startActivity(intent);
 
-                if(rooms == R.id.nav_rooms){
+                            return true;
+                        }
+                        break;
+                    case R.id.nav_profile:
+                        Toast.makeText(this, "Profile", Toast.LENGTH_SHORT).show();
+                        int profile = item.getItemId();
 
-                    Intent intent = new Intent(Rooms.this,Rooms.class);
-                    startActivity(intent);
+                        if (profile == R.id.nav_profile) {
 
-                    return true;
+                            Intent intent = new Intent(Rooms.this, Activity_Profile.class);
+                            startActivity(intent);
+
+                            return true;
+                        }
+                        break;
+                    case R.id.nav_notifications:
+                        Toast.makeText(this, "Notification", Toast.LENGTH_SHORT).show();
+                        int Notification = item.getItemId();
+
+                        if (Notification == R.id.nav_notifications) {
+
+                            Intent intent = new Intent(Rooms.this, Notifications.class);
+                            startActivity(intent);
+
+                            return true;
+                        }
+                        break;
+                    case R.id.nav_settings:
+                        Toast.makeText(this, "Setting", Toast.LENGTH_SHORT).show();
+                        int Settings = item.getItemId();
+
+                        if (Settings == R.id.nav_settings) {
+
+                            Intent intent = new Intent(Rooms.this, settings.class);
+                            startActivity(intent);
+
+                            return true;
+                        }
+                        break;
+
+                    default:
+                        throw new IllegalStateException("Unexpected value: " + item.getItemId());
                 }
-                break;
-            case R.id.nav_profile:
-                Toast.makeText(this,"Profile", Toast.LENGTH_SHORT).show();
-                int profile= item.getItemId();
 
-                if(profile == R.id.nav_profile){
+                return true;
+            }
 
-                    Intent intent = new Intent(Rooms.this,Activity_Profile.class);
-                    startActivity(intent);
-
-                    return true;
-                }
-                break;
-            case R.id.nav_notifications:
-                Toast.makeText(this,"Notification", Toast.LENGTH_SHORT).show();
-                int Notification = item.getItemId();
-
-                if(Notification == R.id.nav_notifications){
-
-                    Intent intent = new Intent(Rooms.this,Notifications.class);
-                    startActivity(intent);
-
-                    return true;
-                }
-                break;
-            case R.id.nav_settings:
-                Toast.makeText(this,"Setting", Toast.LENGTH_SHORT).show();
-                int Settings = item.getItemId();
-
-                if(Settings == R.id.nav_settings){
-
-                    Intent intent = new Intent(Rooms.this,settings.class);
-                    startActivity(intent);
-
-                    return true;
-                }
-                break;
-
-            default:
-                throw new IllegalStateException("Unexpected value: " + item.getItemId());
         }
-
-        return true;
-    }
-}
+    

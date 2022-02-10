@@ -40,8 +40,6 @@
                         android:textStyle="bold" />
                 </RelativeLayout>
 
-
-
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -80,14 +78,6 @@
                             android:text="Graphic and Visual Computing"
                             android:textColor="#ffff"
                             android:textSize="22sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/TitleELEC4"
-                            android:text=""
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
 
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
@@ -131,15 +121,6 @@
                             android:textColor="#ffff"
                             android:textSize="22sp" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/TitleELEC5"
-                            android:text=""
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
-
-
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -177,16 +158,17 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@+id/ClassSDF105"
-                            android:layout_marginTop="114dp"
+                            android:layout_marginTop="88dp"
                             android:text="Object Oriented Programming 2"
                             android:textColor="#ffff"
                             android:textSize="22sp" />
 
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="91dp"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/TitleSDF105"
                             android:text="C#"
+                            android:textColor="@color/white"
                             android:textSize="20sp"
                             android:textStyle="bold" />
 
@@ -232,13 +214,6 @@
                             android:textColor="#ffff"
                             android:textSize="22sp" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/TitleHCI102"
-                            android:text=""
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
             </LinearLayout>

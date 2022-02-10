@@ -11,6 +11,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -24,12 +25,16 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
+
 public class Signup extends AppCompatActivity {
 
     private Button signUpBtn;
     private EditText email, password,confirmPassword;
     private String emailExistUrl = "https://knowtech-study.000webhostapp.com/isEmailExist.php";
     private Tool TOOL = new Tool(this);
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,6 +78,8 @@ public class Signup extends AppCompatActivity {
 
         disableEnableButton();
     }
+
+
 
     public void disableEnableButton() {
         boolean status = true;

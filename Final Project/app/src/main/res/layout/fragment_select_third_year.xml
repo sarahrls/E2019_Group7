@@ -78,15 +78,6 @@
                                 android:textColor="#ffff"
                                 android:textSize="22sp" />
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_below="@id/TitleIAS101"
-                                android:text=""
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
-
-
                         </RelativeLayout>
                     </androidx.cardview.widget.CardView>
 
@@ -130,15 +121,6 @@
                                 android:textColor="#070606"
                                 android:textSize="22sp" />
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_below="@id/TitleSE101"
-                                android:text=""
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
-
-
                         </RelativeLayout>
                     </androidx.cardview.widget.CardView>
 
@@ -180,14 +162,6 @@
                                 android:text="Computational Science"
                                 android:textColor="#ffff"
                                 android:textSize="22sp" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_below="@id/TitleELEC1"
-                                android:text=""
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
 
                         </RelativeLayout>
                     </androidx.cardview.widget.CardView>
@@ -278,16 +252,6 @@
                                 android:text="Micro Controller Programming"
                                 android:textColor="#ffff"
                                 android:textSize="22sp" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_below="@id/TitleIT101"
-                                android:text=""
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
-
-
                         </RelativeLayout>
                     </androidx.cardview.widget.CardView>
 
@@ -345,15 +309,6 @@
                                 android:textColor="#ffff"
                                 android:textSize="22sp" />
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_below="@id/TitleELEC2"
-                                android:text=""
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
-
-
                         </RelativeLayout>
                     </androidx.cardview.widget.CardView>
 
@@ -397,18 +352,8 @@
                                 android:textColor="#ffff"
                                 android:textSize="22sp" />
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_below="@id/TitleSE102"
-                                android:text=""
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
-
                         </RelativeLayout>
                     </androidx.cardview.widget.CardView>
-
-
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="wrap_content"
@@ -448,14 +393,6 @@
                                 android:text="Parallel and Distributed Computation"
                                 android:textColor="#ffff"
                                 android:textSize="22sp" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_below="@id/TitleELEC3"
-                                android:text=""
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
 
                         </RelativeLayout>
                     </androidx.cardview.widget.CardView>
@@ -499,15 +436,6 @@
                                 android:textColor="#ffff"
                                 android:textSize="22sp" />
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_below="@id/TitleCC108"
-                                android:text=""
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
-
-
                         </RelativeLayout>
                     </androidx.cardview.widget.CardView>
 
@@ -550,14 +478,6 @@
                                 android:textColor="#ffff"
                                 android:textSize="22sp" />
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_below="@id/TitleOS102"
-                                android:text=""
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
-
                         </RelativeLayout>
                     </androidx.cardview.widget.CardView>
 
@@ -599,14 +519,6 @@
                                 android:text="Social Media Presentation"
                                 android:textColor="#ffff"
                                 android:textSize="22sp" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_below="@id/TitleIT102"
-                                android:text=""
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
 
                         </RelativeLayout>
                     </androidx.cardview.widget.CardView>

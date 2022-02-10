@@ -17,6 +17,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="166dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="7dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginEnd="212dp"
+            android:layout_marginBottom="-1dp"
+            android:text="Settings"
+            android:textSize="40dp"
+            android:textStyle="bold" />
     </RelativeLayout>
 
     <ScrollView
@@ -39,8 +54,9 @@
 
                 <RelativeLayout
                     android:layout_width="50dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="45dp"
                     android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
                     android:background="@drawable/ic_round_person_outline_24"
                     android:backgroundTint="@color/purple_200">
 
@@ -159,8 +175,12 @@
 
                 <RelativeLayout
                     android:layout_width="50dp"
+
                     android:layout_height="match_parent"
                     android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+
                     android:background="@drawable/ic_round_notifications_24"
                     android:backgroundTint="@color/purple_200">
 
@@ -248,8 +268,9 @@
 
                 <RelativeLayout
                     android:layout_width="50dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="45dp"
                     android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
                     android:background="@drawable/ic_round_help_outline_24"
                     android:backgroundTint="@color/purple_200">
 
@@ -399,7 +420,7 @@
     </ScrollView>
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/Settings"
         android:layout_width="166dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="2dp"
