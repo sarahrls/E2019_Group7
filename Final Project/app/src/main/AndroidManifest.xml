@@ -14,9 +14,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KnowTech">
         <activity
-            android:name=".comment"
-            android:exported="false" />
-        <activity
             android:name=".Tool"
             android:exported="false" />
         <activity
@@ -38,6 +35,8 @@
         <activity
             android:name=".Activity_Profile"
             android:exported="false" />
+        <activity android:name=".settings"
+            android:exported="false"/>
         <activity
             android:name=".Rooms"
             android:exported="false" />
@@ -65,13 +64,6 @@
         <activity
             android:name=".RoomCC102"
             android:exported="false" />
-        <activity
-            android:name=".RoomCC101"
-            android:exported="false" />
-        <activity
-            android:name=".Homepage"
-            android:exported="false" />
-
         <activity
             android:name=".RoomCC101"
             android:exported="false" />

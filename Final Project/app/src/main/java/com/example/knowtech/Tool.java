@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.DefaultRetryPolicy;
 
@@ -36,7 +37,7 @@ import java.util.Map;
 import java.util.Set;
 
 
-public class Tool {
+public class Tool extends AppCompatActivity {
     Context context;
 
 
@@ -260,5 +261,9 @@ public class Tool {
     public boolean isInternetConnectionAvailable() {
         ConnectivityManager cm = (ConnectivityManager) this.context.getSystemService(Context.CONNECTIVITY_SERVICE);
         return cm.getActiveNetworkInfo() != null;
+    }
+
+    public Tool() {
+
     }
 }

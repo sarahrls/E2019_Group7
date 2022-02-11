@@ -8,15 +8,15 @@
 
     <RelativeLayout
         android:id="@+id/relativeLayout3"
-        android:layout_width="65dp"
-        android:layout_height="50dp"
+        android:layout_width="53dp"
+        android:layout_height="38dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="350dp"
         android:background="@drawable/ic_round_arrow_back_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.046"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
 
         <TextView
             android:id="@+id/textView11"
@@ -25,12 +25,11 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="7dp"
-            android:layout_marginLeft="5dp"
+            android:layout_marginStart="10dp"
             android:layout_marginEnd="212dp"
             android:layout_marginBottom="-1dp"
-            android:text="Settings"
-            android:textSize="40dp"
+            android:text="@string/settings"
+            android:textSize="40sp"
             android:textStyle="bold" />
     </RelativeLayout>
 
@@ -69,7 +68,7 @@
                     android:layout_alignParentTop="true"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentBottom="true"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="18dp"
                     android:layout_marginEnd="193dp"
                     android:layout_marginBottom="3dp"
                     android:text="Account"
@@ -88,7 +87,7 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="5dp"
                     android:text="Profile Information"
-                    android:textSize="18dp" />
+                    android:textSize="18sp" />
 
                 <RelativeLayout
                     android:layout_width="30dp"
@@ -134,7 +133,7 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="5dp"
                     android:text="Privacy and Security"
-                    android:textSize="18dp" />
+                    android:textSize="18sp" />
 
                 <RelativeLayout
                     android:layout_width="30dp"
@@ -157,7 +156,7 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="5dp"
                     android:text="Backup and Restore"
-                    android:textSize="18dp" />
+                    android:textSize="18sp" />
 
                 <RelativeLayout
                     android:layout_width="30dp"
@@ -210,7 +209,7 @@
                     android:layout_marginStart="15dp"
                     android:layout_marginTop="15dp"
                     android:text="Silent mode"
-                    android:textSize="18dp" />
+                    android:textSize="18sp" />
 
                 <Switch
                     android:id="@+id/switch1"
@@ -252,7 +251,7 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="15dp"
                     android:text="Do not disturb"
-                    android:textSize="18dp" />
+                    android:textSize="18sp" />
 
                 <Switch
                     android:id="@+id/switch3"
@@ -285,7 +284,7 @@
                     android:layout_marginEnd="137dp"
                     android:layout_marginBottom="5dp"
                     android:text="About knowtech"
-                    android:textSize="25dp"
+                    android:textSize="25sp"
                     android:textStyle="bold" />
             </RelativeLayout>
 
@@ -300,7 +299,7 @@
                     android:layout_marginStart="15dp"
                     android:layout_marginTop="5dp"
                     android:text="Help and Support"
-                    android:textSize="18dp" />
+                    android:textSize="18sp" />
 
                 <RelativeLayout
                     android:layout_width="30dp"
@@ -323,7 +322,7 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="5dp"
                     android:text="Terms of Use"
-                    android:textSize="18dp" />
+                    android:textSize="18sp" />
 
                 <RelativeLayout
                     android:layout_width="30dp"
@@ -428,7 +427,7 @@
         android:layout_marginEnd="162dp"
         android:layout_marginBottom="58dp"
         android:text="Settings"
-        android:textSize="40sp"
+        android:textSize="35sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/scrollView3"
         app:layout_constraintEnd_toEndOf="parent"

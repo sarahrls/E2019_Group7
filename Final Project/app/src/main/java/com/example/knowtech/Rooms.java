@@ -173,6 +173,19 @@ public class Rooms extends AppCompatActivity implements NavigationView.OnNavigat
                             return true;
                         }
                         break;
+                    case R.id.nav_logout:
+                        Toast.makeText(this, "Logout", Toast.LENGTH_SHORT).show();
+                        int Logout = item.getItemId();
+
+                        if (Logout == R.id.nav_logout) {
+
+                            Intent intent = new Intent(Rooms.this, Signin.class);
+                            startActivity(intent);
+
+                            return true;
+                        }
+                        break;
+
 
                     default:
                         throw new IllegalStateException("Unexpected value: " + item.getItemId());
