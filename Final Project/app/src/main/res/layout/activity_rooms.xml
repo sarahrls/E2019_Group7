@@ -22,7 +22,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <TextView
@@ -34,7 +34,7 @@
                     android:textSize="40sp"
                     android:textStyle="bold"
                     android:paddingRight="20dp"
-                    android:paddingTop="20dp"
+
                     android:paddingLeft="20dp"
                     android:paddingBottom="10dp"/>
 
@@ -62,7 +62,8 @@
                         android:layout_height="60dp"
                         android:layout_marginStart="2dp"
                         android:layout_toEndOf="@+id/AllButton"
-                        android:spinnerMode="dropdown" />
+                        android:spinnerMode="dropdown"
+                        tools:ignore="SpeakableTextPresentCheck" />
                 </RelativeLayout>
 
                 <FrameLayout

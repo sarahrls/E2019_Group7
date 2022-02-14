@@ -48,6 +48,8 @@ public class Rooms extends AppCompatActivity implements NavigationView.OnNavigat
     private MenuItem item;
 
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,7 +70,7 @@ public class Rooms extends AppCompatActivity implements NavigationView.OnNavigat
         names.add("Fourth Year");
 
         //NAVIGATION
-        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.white)));
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.purple_500)));
 
         drawerLayout = findViewById(R.id.drawableLayout);
         navigationView = findViewById(R.id.navigationview);
@@ -117,11 +119,14 @@ public class Rooms extends AppCompatActivity implements NavigationView.OnNavigat
                 fragmentTransaction.replace(R.id.RoomsFrameLayout, fragment);
                 fragmentTransaction.commit();
             }
-
-
             });
     }
-
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item){
+        if(toggle.onOptionsItemSelected(item))
+            return true;
+        return super.onOptionsItemSelected(item);
+    }
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {

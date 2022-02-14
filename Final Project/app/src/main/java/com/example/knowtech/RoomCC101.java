@@ -1,21 +1,19 @@
 package com.example.knowtech;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+import androidx.core.content.ContextCompat;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
-import android.app.Dialog;
-import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.os.Build;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+
 import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageView;
@@ -37,81 +35,91 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import retrofit2.Call;
-import retrofit2.Callback;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.style.ImageSpan;
+
+import com.google.android.material.tabs.TabLayout;
+
+import java.util.ArrayList;
+
 
 public class RoomCC101 extends AppCompatActivity {
-    Dialog popAddPost;
-    ImageView popup_addpost;
-    TextView popupTitle, popupDescription, popupLink;
-    ProgressBar popup_progressBar;
-
-    private SessionManagement sessionManagement;
-    private Admin admin;
-    private Tool TOOL;
-
-
+    TabLayout tabLayout;
+    ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_room_cc101);
 
-        RelativeLayout noDataContainer = findViewById(R.id.noDataContainer);
-        ConstraintLayout loadingContainer = findViewById(R.id.loadingContainer);
-        CardView announcementBtn = findViewById(R.id.mainAddAnnouncementBtn);
-        RecyclerView recyclerView = findViewById(R.id.mainAnnouncementRecycleView);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
 
-        List<Announcement> announcements  = new ArrayList<>();
-        String getAnnouncementURL = "https://e2019cc107grouptwo.000webhostapp.com/API/getAnnouncements.php";
+        tabLayout = findViewById(R.id.main_tab_layout);
+        viewPager = findViewById(R.id.main_view_pager);
 
+        ArrayList<String> titles = new ArrayList<>();
 
-        announcementBtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent intent = new Intent(RoomCC101.this,Post.class);
-                    startActivity(intent);
-                    finish();
-                }
-            });
+        titles.add("Feed");
+        titles.add("Search");
 
-        if (TOOL.isInternetConnectionAvailable()) {
-            HashMap<String, String> params = new HashMap<String, String>();
-            params.put("id", "" + admin.id);
-            params.put("email", admin.email);
+        tabLayout.setupWithViewPager(viewPager);
 
-            loadingContainer.setVisibility(View.VISIBLE);
+        prepareViewPager(viewPager, titles);
+    }
 
-            TOOL.Ajax(getAnnouncementURL, Request.Method.POST, params, new Response.Listener<String>() {
-                @Override
-                public void onResponse(String response) {
-                    loadingContainer.setVisibility(View.GONE);
-                    try {
-                        JSONObject obj = new JSONObject(response);
+    private void prepareViewPager(ViewPager viewPager, ArrayList<String> titles) {
+        SessionManagement sessionManagement = new SessionManagement(this);
+        MainAdapter adapter = new MainAdapter(getSupportFragmentManager());
+        RoomCC101F mainFragment = new RoomCC101F(sessionManagement, this);
 
-                        if (obj.getBoolean("success")) {
-                            JSONArray EVENTS = obj.getJSONArray("object");
+        for (int i = 0; i < titles.size();i++) {
+            Bundle bundle = new Bundle();
+            bundle.putString("title", titles.get(i));
+            mainFragment.setArguments(bundle);
+            adapter.addFragment(mainFragment, titles.get(i));
+            mainFragment = new RoomCC101F( sessionManagement, this);
+        }
 
-                            if (EVENTS.length() != 0) {
-                                for (int i =0; i < EVENTS.length(); i++) {
-                                    Announcement announcement = TOOL.createAnnouncementFromJSONOBJ(EVENTS.getJSONObject(i));
-                                    announcements.add(announcement);
-                                }
+        viewPager.setAdapter(adapter);
+    }
 
+    private class MainAdapter extends FragmentPagerAdapter {
+        ArrayList<Fragment> fragments = new ArrayList<>();
+        ArrayList<String> strings = new ArrayList<>();
+        int[] imageList =  {R.drawable.ic_round_post,R.drawable.ic_round_search};
 
-                            } else {
-                                noDataContainer.setVisibility(View.VISIBLE);
-                            }
-                        } else {
-                            noDataContainer.setVisibility(View.VISIBLE);
-                        }
-                    } catch (Exception error) {
-                        TOOL.ToastText(error.getMessage());
-                    }
-                }
-            });
-        } else {
-            TOOL.ToastText("Error, Please check your internet connection!");
+        public void addFragment(Fragment fragment, String s) {
+            fragments.add(fragment);
+            strings.add(s);
+        }
+
+        public  MainAdapter(FragmentManager supportFragmentManager) {
+            super(supportFragmentManager);
+        }
+
+        @Override
+        public int getCount() {
+            return fragments.size();
+        }
+
+        @NonNull
+        @Override
+        public Fragment getItem(int position) {
+            return fragments.get(position);
+        }
+
+        @Nullable
+        @Override
+        public CharSequence getPageTitle(int position) {
+            Drawable drawable = ContextCompat.getDrawable(getApplicationContext(), imageList[position]);
+            drawable.setBounds(0,0,drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight());
+            SpannableString spannableString = new SpannableString("   " + strings.get(position));
+            ImageSpan imageSpan = new ImageSpan(drawable, ImageSpan.ALIGN_BOTTOM);
+            spannableString.setSpan(imageSpan,0,1, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+            return spannableString;
         }
     }
 }
