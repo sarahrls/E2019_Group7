@@ -76,7 +76,7 @@
                     <androidx.cardview.widget.CardView
                         android:id="@+id/aaaSaveBtn"
                         android:layout_width="80dp"
-                        android:layout_height="40dp"
+                        android:layout_height="50dp"
                         android:layout_gravity="center"
                         android:clickable="true"
                         app:cardBackgroundColor="@color/purple_500"
