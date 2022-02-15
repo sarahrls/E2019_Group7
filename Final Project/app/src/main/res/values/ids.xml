@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="RoomCC106_Card" type="id" />
+    <item name="RoomSDF104_Card" type="id" />
+    <item name="RoomAL102_Card" type="id" />
+    <item name="RoomNC101_Card" type="id" />
+    <item name="RoomAR101_Card" type="id" />
+    <item name="RoomOS101_Card" type="id" />
+    <item name="RoomPL101_Card" type="id" />
+    <item name="RoomHCI101_Card" type="id" />
+    <item name="RoomAL103_Card" type="id" />
+    <item name="RoomIAS101_Card" type="id" />
+    <item name="RoomSE101_Card" type="id" />
+    <item name="RoomELEC1_Card" type="id" />
+    <item name="RoomCC107_Card" type="id" />
+    <item name="RoomIT101_Card" type="id" />
+    <item name="RoomELEC2_Card" type="id" />
+    <item name="RoomSE102_Card" type="id" />
+    <item name="RoomELEC3_Card" type="id" />
+    <item name="RoomCC108_Card" type="id" />
+    <item name="RoomOS102_Card" type="id" />
+    <item name="RoomIT102_Card" type="id" />
+    <item name="RoomELEC4_Card" type="id" />
+    <item name="RoomELEC5_Card" type="id" />
+    <item name="RoomSDF105_Card" type="id" />
+    <item name="RoomHCI102_Card" type="id" />
+</resources>

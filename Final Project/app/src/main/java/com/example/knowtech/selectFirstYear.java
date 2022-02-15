@@ -28,7 +28,6 @@ public class selectFirstYear extends Fragment {
         CardView RoomCC102 = view.findViewById(R.id.RoomCC102_Card);
         CardView RoomDS101 = view.findViewById(R.id.RoomDS101_Card);
         CardView RoomAL101 = view.findViewById(R.id.RoomAL101_Card);
-
         CardView RoomCC103 = view.findViewById(R.id.RoomCC103_Card);
         CardView RoomCC104 = view.findViewById(R.id.RoomCC104_Card);
         CardView RoomCC105 = view.findViewById(R.id.RoomCC105_Card);
@@ -39,7 +38,6 @@ public class selectFirstYear extends Fragment {
         RoomCC102.setOnClickListener(new selectFirstYear.Clik());
         RoomDS101.setOnClickListener(new selectFirstYear.Clik());
         RoomAL101.setOnClickListener(new selectFirstYear.Clik());
-
         RoomCC103.setOnClickListener(new selectFirstYear.Clik());
         RoomCC104.setOnClickListener(new selectFirstYear.Clik());
         RoomCC105.setOnClickListener(new selectFirstYear.Clik());
