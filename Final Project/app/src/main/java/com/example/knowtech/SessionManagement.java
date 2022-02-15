@@ -21,14 +21,14 @@ public class SessionManagement {
         editor = sharedPreferences.edit();
     }
 
-    public void saveSession(Admin admin) {
-        int id = admin.getId();
-        int age = admin.getAge();
-        String email = admin.getEmail(),
-                firstname = admin.getFirstname(),
-                lastname = admin.getLastname(),
-                gender = admin.getGender(),
-                bday = admin.getBirthdate();
+    public void saveSession(User user) {
+        int id = user.getId();
+        int age = user.getAge();
+        String email = user.getEmail(),
+                firstname = user.getFirstname(),
+                lastname = user.getLastname(),
+                gender = user.getGender(),
+                bday = user.getBirthdate();
 
         editor.putInt(SESSION_KEY, id).commit();
         editor.putInt(SESSION_AGE_KEY, age).commit();
@@ -45,7 +45,7 @@ public class SessionManagement {
         return sharedPreferences.getInt(SESSION_KEY, -1);
     }
 
-    public Admin getSession() {
+    public User getSession() {
         int id = sharedPreferences.getInt(SESSION_KEY, -1);
         int age = sharedPreferences.getInt(SESSION_AGE_KEY, -1);
         String _email = sharedPreferences.getString(SESSION_EMAIL_KEY, "");
@@ -53,8 +53,8 @@ public class SessionManagement {
         String _firstname = sharedPreferences.getString(SESSION_FN_KEY, "");
         String _gender = sharedPreferences.getString(SESSION_GENDER_KEY, "");
         String _bdate = sharedPreferences.getString(SESSION_BDATE_KEY, "");
-        Admin admin = new Admin(id, _email, _firstname, _lastname, _gender, _bdate, age);
-        return admin;
+        User user = new User(id, _email, _firstname, _lastname, _gender, _bdate, age);
+        return user;
     }
 
     public void removeSession() {

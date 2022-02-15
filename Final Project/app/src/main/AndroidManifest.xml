@@ -14,10 +14,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KnowTech">
         <activity
+
+            android:name=".tryy"
+            android:exported="false"
+            android:label="@string/title_activity_tryy"
+            android:theme="@style/Theme.KnowTech.NoActionBar" />
+        <activity
+            android:name=".comment"
+            android:exported="false" />
+        <activity
             android:name=".Tool"
             android:exported="false" />
         <activity
-            android:name=".Post"
+            android:name=".AddPost"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
@@ -67,14 +76,9 @@
         <activity
             android:name=".RoomCC101"
             android:exported="false" />
-        <activity
-            android:name=".Secondyear"
-            android:exported="false"
-            android:label="@string/title_activity_secondyear"
-            android:theme="@style/Theme.KnowTech.NoActionBar"
-            tools:ignore="Instantiatable" />
 
         <activity
+
             android:name=".customize_profile"
             android:exported="false" />
         <activity

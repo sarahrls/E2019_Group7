@@ -37,7 +37,7 @@
                             android:layout_width="45dp"
                             android:layout_height="45dp"
                             android:layout_gravity="center"
-                            app:cardBackgroundColor="@color/white"
+                            app:cardBackgroundColor="@color/purple_200"
                             app:cardCornerRadius="100dp">
 
                             <ImageView
@@ -87,7 +87,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
-                    android:textStyle="bold"
                     android:text="TextView" />
             </androidx.cardview.widget.CardView>
 
@@ -112,8 +111,7 @@
                     android:paddingRight="20dp"
                     android:paddingBottom="10dp"
                     android:text="For Example this is text"
-                    android:textColor="@color/black" />
-
+                    android:textColor="@color/white" />
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
@@ -143,25 +141,10 @@
                     android:inputType="textMultiLine"
                     android:maxHeight="100dp"
                     android:overScrollMode="ifContentScrolls"
-                    android:padding="10dp" />
+                    android:padding="10dp"
+                    tools:ignore="TouchTargetSizeCheck" />
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/anouncementHeart"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="2"
-                    android:clickable="true"
-                    android:foreground="?android:attr/selectableItemBackground"
-                    app:cardBackgroundColor="#F0F2F5"
-                    app:cardElevation="0dp">
 
-                    <RelativeLayout
-                        android:id="@+id/announcementHeartdrawable"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_gravity="center"
-                        android:background="@drawable/ic_round_star" />
-                </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/announcementSend"
@@ -171,7 +154,8 @@
                     android:clickable="true"
                     android:foreground="?android:attr/selectableItemBackground"
                     app:cardBackgroundColor="#F0F2F5"
-                    app:cardElevation="0dp">
+                    app:cardElevation="0dp"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck">
 
                     <RelativeLayout
                         android:layout_width="24dp"

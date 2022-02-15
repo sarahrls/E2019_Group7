@@ -2,11 +2,11 @@ package com.example.knowtech;
 
 import android.os.Bundle;
 
-public class Admin {
+public class User {
     int id, age;
     String email, firstname, lastname, gender, birthdate;
 
-    public Admin(int id, String email, String firstname, String lastname, String gender, String birthdate, int age) {
+    public User(int id, String email, String firstname, String lastname, String gender, String birthdate, int age) {
         this.id = id;
         this.email = email;
         this.firstname = firstname;

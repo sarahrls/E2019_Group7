@@ -21,34 +21,34 @@ import org.json.JSONObject;
 
 import java.util.List;
 
-public class RVAdapterAnnouncement extends RecyclerView.Adapter<RVAdapterAnnouncement.ViewHolder> {
+public class RVAdapterPost extends RecyclerView.Adapter<RVAdapterPost.ViewHolder> {
 
-    private List<Announcement> announcementList;
+    private List<Post> postList;
     private Context context;
     private Tool TOOL;
 
-    public RVAdapterAnnouncement(List<Announcement> announcementList, Context context) {
-        this.announcementList = announcementList;
+    public RVAdapterPost(List<Post> postList, Context context) {
+        this.postList = postList;
         this.context = context;
         TOOL = new Tool(context);
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.add_post,parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_postlayout,parent, false);
         return new ViewHolder(v);
     }
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        Announcement announcement = announcementList.get(position);
+        Post post = postList.get(position);
 
-        holder.name.setText(announcement.admin.firstname + " " + announcement.admin.lastname);
-        holder.title.setText(announcement.title);
-        holder.description.setText(announcement.description);
+        holder.name.setText(post.user.firstname + " " + post.user.lastname);
+        holder.title.setText(post.title);
+        holder.description.setText(post.description);
 
-        setHeartedUI(holder, announcement.isHearted);
-        holder.adapter = new RVAdapterComment(announcement.comments, context);
+        //setHeartedUI(holder, post.isHearted);
+        holder.adapter = new RVAdapterComment(post.comments, context);
         holder.recyclerView.setLayoutManager(holder.linearLayoutManager);
         holder.recyclerView.setAdapter(holder.adapter);
 
@@ -61,7 +61,7 @@ public class RVAdapterAnnouncement extends RecyclerView.Adapter<RVAdapterAnnounc
 
                 holder.comment.setText("");
 
-                announcement.Comment(comment, new Response.Listener<String>(){
+                post.Comment(comment, new Response.Listener<String>(){
                     @Override
                     public void onResponse(String response) {
                         JSONObject object = null;
@@ -77,22 +77,18 @@ public class RVAdapterAnnouncement extends RecyclerView.Adapter<RVAdapterAnnounc
         });
     }
 
-    public void setHeartedUI(ViewHolder holder, Boolean bool) {
-        holder.heartBtn.setBackgroundColor(Color.parseColor(bool ? "#C82927" : "#F0F2F5"));
-        holder.heartDrawable.getBackground().setColorFilter(Color.parseColor(bool ? "#ffffff" : "#65676B"), PorterDuff.Mode.SRC_IN);
-    }
 
     @Override
 
     public int getItemCount() {
-        return announcementList.size();
+        return postList.size();
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        CardView cardView, heartBtn, sendBtn;
+        CardView cardView, sendBtn;
         TextView name, title, comment;
         EditText description;
-        RelativeLayout heartDrawable;
+
         RecyclerView recyclerView;
         LinearLayoutManager linearLayoutManager;
         RVAdapterComment adapter;
@@ -105,8 +101,6 @@ public class RVAdapterAnnouncement extends RecyclerView.Adapter<RVAdapterAnnounc
             name = itemView.findViewById(R.id.anName);
             title = itemView.findViewById(R.id.anTitle);
             description = itemView.findViewById(R.id.anDescription);
-            heartBtn = itemView.findViewById(R.id.anouncementHeart);
-            heartDrawable = itemView.findViewById(R.id.announcementHeartdrawable);
             sendBtn = itemView.findViewById(R.id.announcementSend);
             comment = itemView.findViewById(R.id.announcementText);
         }
