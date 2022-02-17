@@ -17,5 +17,6 @@ public class getStarted extends AppCompatActivity {
             Intent int1 =new Intent(getStarted.this,Signin.class);
             startActivity(int1);
         });
+        getSupportActionBar().hide();
     }
 }

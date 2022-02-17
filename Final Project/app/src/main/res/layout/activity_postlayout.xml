@@ -37,11 +37,12 @@
                             android:layout_width="45dp"
                             android:layout_height="45dp"
                             android:layout_gravity="center"
-                            app:cardBackgroundColor="@color/purple_200"
-                            app:cardCornerRadius="100dp">
+                            app:cardCornerRadius="100dp"
+                            >
 
                             <ImageView
                                 android:id="@+id/imageView13"
+                                android:src="@mipmap/image"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content" />
                         </androidx.cardview.widget.CardView>
@@ -55,24 +56,17 @@
                             android:layout_width="324dp"
                             android:layout_height="match_parent"
                             android:orientation="vertical"
-                            android:paddingTop="10dp">
+                            android:paddingTop="20dp">
 
                             <TextView
                                 android:id="@+id/anName"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="Firstname, Lastname"
+                                android:textColor="#434242"
                                 android:textSize="16sp"
                                 android:textStyle="bold" />
 
-                            <TextView
-                                android:id="@+id/textView13"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:padding="2.5dp"
-                                android:text="Admin"
-                                android:textSize="14sp"
-                                android:textStyle="italic" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
                 </LinearLayout>
@@ -87,7 +81,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
-                    android:text="TextView" />
+                    android:paddingStart="20dp"
+                    android:text="TextView"
+                    android:textColor="#434242"
+                    android:textColorHighlight="#00FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
@@ -99,19 +98,22 @@
                 <EditText
                     android:id="@+id/anDescription"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@android:color/transparent"
+                    android:layout_height="72dp"
+                    android:background="@color/white"
                     android:ems="10"
                     android:enabled="false"
                     android:gravity="start|top"
                     android:inputType="textMultiLine"
+                    android:maxLines="10"
                     android:minHeight="100dp"
                     android:paddingLeft="20dp"
                     android:paddingTop="10dp"
                     android:paddingRight="20dp"
                     android:paddingBottom="10dp"
                     android:text="For Example this is text"
-                    android:textColor="@color/white" />
+                    android:textColor="#494444"
+                    android:textColorHighlight="#FFFFFF"
+                    android:textColorLink="#FFFFFF" />
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
@@ -132,12 +134,12 @@
 
                 <EditText
                     android:id="@+id/announcementText"
-                    android:layout_width="223dp"
+                    android:layout_width="258dp"
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
                     android:ems="10"
                     android:gravity="start|top"
-                    android:hint="Write a comment"
+                    android:hint="You have better ideas?"
                     android:inputType="textMultiLine"
                     android:maxHeight="100dp"
                     android:overScrollMode="ifContentScrolls"
@@ -145,23 +147,26 @@
                     tools:ignore="TouchTargetSizeCheck" />
 
 
-
                 <androidx.cardview.widget.CardView
                     android:id="@+id/announcementSend"
-                    android:layout_width="0dp"
+                    android:layout_width="112dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="2"
+                    android:layout_weight="1"
                     android:clickable="true"
                     android:foreground="?android:attr/selectableItemBackground"
                     app:cardBackgroundColor="#F0F2F5"
                     app:cardElevation="0dp"
                     tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck">
 
-                    <RelativeLayout
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:background="@drawable/ic_round_star" />
+                        android:drawableLeft="@drawable/ic_round_chat_bubble_24"
+                        android:text="Discuss"
+                        android:textColor="#494444"
+                        android:textSize="16sp" />
                 </androidx.cardview.widget.CardView>
 
             </LinearLayout>

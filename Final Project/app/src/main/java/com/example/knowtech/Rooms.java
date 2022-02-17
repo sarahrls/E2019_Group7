@@ -1,13 +1,11 @@
 package com.example.knowtech;
 
-import android.app.Notification;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 
-import android.view.Menu;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
@@ -19,10 +17,7 @@ import com.google.android.material.navigation.NavigationView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.cardview.widget.CardView;
 
-import androidx.appcompat.widget.Toolbar;
-import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -154,13 +149,13 @@ public class Rooms extends AppCompatActivity implements NavigationView.OnNavigat
                             return true;
                         }
                         break;
-                    case R.id.nav_notifications:
-                        Toast.makeText(this, "Notification", Toast.LENGTH_SHORT).show();
-                        int Notification = item.getItemId();
+                    case R.id.nav_aboutus:
+                        Toast.makeText(this, "About Us", Toast.LENGTH_SHORT).show();
+                        int AboutUs = item.getItemId();
 
-                        if (Notification == R.id.nav_notifications) {
+                        if (AboutUs == R.id.nav_aboutus) {
 
-                            Intent intent = new Intent(Rooms.this, Notifications.class);
+                            Intent intent = new Intent(Rooms.this, AboutUs.class);
                             startActivity(intent);
 
                             return true;

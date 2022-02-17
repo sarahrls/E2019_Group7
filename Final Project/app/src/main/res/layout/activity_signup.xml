@@ -98,9 +98,10 @@
             android:id="@+id/reg_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableStart="@drawable/ic_round_email"
+            android:drawableStart="@drawable/ic_lock"
             android:drawablePadding="10dp"
             android:fontFamily="@font/noto_sans"
+            android:inputType="textPassword"
             android:textSize="20sp" />
     </com.google.android.material.textfield.TextInputLayout>
 

@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -16,6 +17,7 @@ import android.os.Bundle;
 
 import android.view.Gravity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
@@ -48,6 +50,8 @@ public class RoomCC101 extends AppCompatActivity {
     TabLayout tabLayout;
     ViewPager viewPager;
 
+    private CardView btnBack;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,16 +62,26 @@ public class RoomCC101 extends AppCompatActivity {
 
         tabLayout = findViewById(R.id.main_tab_layout);
         viewPager = findViewById(R.id.main_view_pager);
+        btnBack = findViewById(R.id.btnBack);
+
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
         ArrayList<String> titles = new ArrayList<>();
 
         titles.add("Feed");
-        titles.add("Search");
+
 
         tabLayout.setupWithViewPager(viewPager);
 
         prepareViewPager(viewPager, titles);
     }
+
+
 
     private void prepareViewPager(ViewPager viewPager, ArrayList<String> titles) {
         SessionManagement sessionManagement = new SessionManagement(this);
@@ -88,7 +102,7 @@ public class RoomCC101 extends AppCompatActivity {
     private class MainAdapter extends FragmentPagerAdapter {
         ArrayList<Fragment> fragments = new ArrayList<>();
         ArrayList<String> strings = new ArrayList<>();
-        int[] imageList =  {R.drawable.ic_round_post,R.drawable.ic_round_search};
+        int[] imageList =  {R.drawable.ic_round_post};
 
         public void addFragment(Fragment fragment, String s) {
             fragments.add(fragment);

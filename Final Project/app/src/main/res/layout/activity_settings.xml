@@ -6,40 +6,77 @@
     android:layout_height="match_parent"
     tools:context=".settings">
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout3"
-        android:layout_width="53dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="350dp"
-        android:background="@drawable/ic_round_arrow_back_24"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/textView11"
-            android:layout_width="166dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="212dp"
-            android:layout_marginBottom="-1dp"
-            android:text="@string/settings"
-            android:textSize="40sp"
-            android:textStyle="bold" />
-    </RelativeLayout>
+        <androidx.cardview.widget.CardView
+            android:layout_width="51dp"
+            android:layout_height="match_parent"
+            app:cardElevation="0dp"
+            app:cardMaxElevation="0dp"
+            tools:layout_editor_absoluteX="-2dp"
+            tools:layout_editor_absoluteY="-14dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btnBack"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                app:cardCornerRadius="100dp"
+                app:cardElevation="0dp"
+                tools:layout_editor_absoluteX="3dp"
+                tools:layout_editor_absoluteY="-14dp">
+
+                <ImageView
+                    android:paddingTop="2dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/ic_arrow_back"
+                    tools:layout_editor_absoluteX="3dp"
+                    tools:layout_editor_absoluteY="-14dp" />
+            </androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="358dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:cardElevation="0dp"
+            tools:layout_editor_absoluteX="49dp"
+            tools:layout_editor_absoluteY="-14dp">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_weight="1"
+                android:paddingTop="2dp"
+                android:text="Settings"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="54dp"
+                tools:layout_editor_absoluteY="-11dp" />
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
 
     <ScrollView
         android:id="@+id/scrollView3"
-        android:layout_width="385dp"
-        android:layout_height="675dp"
-        android:layout_marginStart="16dp"
+        android:layout_width="387dp"
+        android:layout_height="644dp"
+        android:layout_marginBottom="44dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -380,61 +417,8 @@
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="60dp">
-
-                <Button
-                    android:id="@+id/button4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="48dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginStart="144dp"
-                    android:layout_marginTop="7dp"
-                    android:layout_marginEnd="121dp"
-                    android:layout_marginBottom="5dp"
-                    android:background="@drawable/btn_bg"
-                    android:text="Logout" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="55dp">
-
-                <Button
-                    android:id="@+id/button5"
-                    android:layout_width="170dp"
-                    android:layout_height="48dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginEnd="99dp"
-                    android:layout_marginBottom="4dp"
-                    android:background="@drawable/btn_bg"
-                    android:text="Delete Account" />
-            </RelativeLayout>
         </LinearLayout>
     </ScrollView>
-
-    <TextView
-        android:id="@+id/Settings"
-        android:layout_width="166dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="9dp"
-        android:layout_marginEnd="162dp"
-        android:layout_marginBottom="58dp"
-        android:text="Settings"
-        android:textSize="35sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/relativeLayout3"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.062" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

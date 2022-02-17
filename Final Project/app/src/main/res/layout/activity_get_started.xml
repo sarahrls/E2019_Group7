@@ -7,52 +7,20 @@
     android:background="#FFFFFF"
     tools:context=".getStarted">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="5"
-        android:gravity="center"
-        android:text="Expand your Knowledge,"
-        android:textColor="@android:color/holo_purple"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:cornerRadius="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.693" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="5"
-        android:gravity="center"
-        android:text="Embrace everyone's perspective."
-        android:textColor="@android:color/holo_purple"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:cornerRadius="15dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.724" />
-
     <Button
         android:id="@+id/btn_getStarted"
         android:layout_width="336dp"
         android:layout_height="79dp"
         android:fontFamily="@font/noto_sans_bold"
         android:text="Get Started"
-        android:textSize="18sp"
-        app:cornerRadius="15dp"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        app:cornerRadius="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.855" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

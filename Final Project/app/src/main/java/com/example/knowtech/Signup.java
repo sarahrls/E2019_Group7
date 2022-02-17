@@ -6,6 +6,7 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.ActionBar;
@@ -29,6 +30,7 @@ import java.util.Map;
 public class Signup extends AppCompatActivity {
 
     private Button signUpBtn;
+    private TextView reg_signin;
     private EditText email, password,confirmPassword;
     private String emailExistUrl = "https://knowtech-study.000webhostapp.com/isEmailExist.php";
     private Tool TOOL = new Tool(this);
@@ -47,6 +49,7 @@ public class Signup extends AppCompatActivity {
         email = findViewById(R.id.reg_email);
         password = findViewById(R.id.reg_password);
         confirmPassword = findViewById(R.id.reg_confirmpassword);
+        reg_signin = findViewById(R.id.reg_signin);
 
         TextWatcher watcher = new TextWatcher() {
             @Override
@@ -76,9 +79,16 @@ public class Signup extends AppCompatActivity {
             }
         });
 
+        reg_signin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                TOOL.startNewActivity(Signin.class);
+            }
+        });
+
+
         disableEnableButton();
     }
-
 
 
     public void disableEnableButton() {

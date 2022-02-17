@@ -61,7 +61,7 @@
                             android:layout_marginLeft="15dp"
                             android:layout_weight="1"
                             android:gravity="start|center_vertical"
-                            android:text="Create"
+                            android:text="Share you ideas"
                             android:textSize="20sp" />
                     </androidx.cardview.widget.CardView>
 
@@ -88,7 +88,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:gravity="center"
-                            android:text="Save"
+                            android:text="Share"
                             android:textAlignment="center"
                             android:textColor="@color/white"
                             android:textSize="15sp"
@@ -172,7 +172,7 @@
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
                                 android:layout_gravity="center"
-                                 />
+                                android:background="@drawable/ic_round_chat_bubble_24" />
                         </androidx.cardview.widget.CardView>
                     </androidx.cardview.widget.CardView>
 

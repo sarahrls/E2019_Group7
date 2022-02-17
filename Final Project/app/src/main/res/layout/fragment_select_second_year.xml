@@ -40,6 +40,7 @@
                 </RelativeLayout>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/RoomCC106_Card"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="12dp"
@@ -82,6 +83,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/RoomSDF104_Card"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:cardElevation="60dp"
@@ -142,6 +144,7 @@
                     android:layout_margin="12dp">
 
                     <RelativeLayout
+                        android:id="@+id/RoomAL102_Card"
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
                         android:background="@drawable/automata"
@@ -192,14 +195,15 @@
                     android:layout_margin="12dp">
 
                     <RelativeLayout
+                        android:id="@+id/RoomNC101_Card"
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
                         android:background="@drawable/network"
                         android:orientation="vertical"
-                        android:paddingTop="20dp"
-                        android:paddingBottom="10dp"
                         android:paddingLeft="20dp"
-                        android:paddingRight="20dp">
+                        android:paddingTop="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingBottom="10dp">
 
                         <TextView
                             android:id="@+id/ClassNC101"
@@ -251,6 +255,7 @@
                 </RelativeLayout>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/RoomAR101_Card"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:cardElevation="60dp"
@@ -295,6 +300,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/RoomOS101_Card101"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:cardElevation="60dp"
@@ -339,6 +345,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/RoomPL101_Card"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:cardElevation="60dp"
@@ -383,6 +390,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/RoomHCI101_Card"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:cardElevation="60dp"
@@ -428,6 +436,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/RoomAL103_Card"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:cardElevation="60dp"

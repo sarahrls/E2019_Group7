@@ -14,14 +14,85 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KnowTech">
         <activity
-
+            android:name=".addpostCC102"
+            android:exported="false" />
+        <activity
+            android:name=".RoomSDF105"
+            android:exported="false" />
+        <activity
+            android:name=".RoomHCI102"
+            android:exported="false" />
+        <activity
+            android:name=".RoomELEC5"
+            android:exported="false" />
+        <activity
+            android:name=".RoomELEC4"
+            android:exported="false" />
+        <activity
+            android:name=".RoomIT102"
+            android:exported="false" />
+        <activity
+            android:name=".RoomOS102"
+            android:exported="false" />
+        <activity
+            android:name=".RoomCC108"
+            android:exported="false" />
+        <activity
+            android:name=".RoomELEC3"
+            android:exported="false" />
+        <activity
+            android:name=".RoomSE102"
+            android:exported="false" />
+        <activity
+            android:name=".RoomELEC2"
+            android:exported="false" />
+        <activity
+            android:name=".RoomIT101"
+            android:exported="false" />
+        <activity
+            android:name=".RoomCC107"
+            android:exported="false" />
+        <activity
+            android:name=".RoomELEC1"
+            android:exported="false" />
+        <activity
+            android:name=".RoomSE101"
+            android:exported="false" />
+        <activity
+            android:name=".RoomIAS101"
+            android:exported="false" />
+        <activity
+            android:name=".RoomAL103"
+            android:exported="false" />
+        <activity
+            android:name=".RoomHCI101"
+            android:exported="false" />
+        <activity
+            android:name=".RoomPL101"
+            android:exported="false" />
+        <activity
+            android:name=".RoomOS101"
+            android:exported="false" />
+        <activity
+            android:name=".RoomAR101"
+            android:exported="false" />
+        <activity
+            android:name=".RoomNC101"
+            android:exported="false" />
+        <activity
+            android:name=".RoomAL102"
+            android:exported="false" />
+        <activity
+            android:name=".RoomSDF104"
+            android:exported="false" />
+        <activity
+            android:name=".RoomCC106"
+            android:exported="false" />
+        <activity
             android:name=".tryy"
             android:exported="false"
             android:label="@string/title_activity_tryy"
             android:theme="@style/Theme.KnowTech.NoActionBar" />
-        <activity
-            android:name=".comment"
-            android:exported="false" />
         <activity
             android:name=".Tool"
             android:exported="false" />
@@ -39,13 +110,17 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Notifications"
+            android:name=".customize_profile"
+            android:exported="false" />
+        <activity
+            android:name=".AboutUs"
             android:exported="false" />
         <activity
             android:name=".Activity_Profile"
             android:exported="false" />
-        <activity android:name=".settings"
-            android:exported="false"/>
+        <activity
+            android:name=".settings"
+            android:exported="false" />
         <activity
             android:name=".Rooms"
             android:exported="false" />
@@ -76,11 +151,6 @@
         <activity
             android:name=".RoomCC101"
             android:exported="false" />
-
-        <activity
-
-            android:name=".customize_profile"
-            android:exported="false" />
         <activity
             android:name=".Signup"
             android:exported="false" />
@@ -90,6 +160,15 @@
         <activity
             android:name=".getStarted"
             android:exported="false" />
+        <activity
+            android:name=".CheckUp"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <meta-data
             android:name="preloaded_fonts"

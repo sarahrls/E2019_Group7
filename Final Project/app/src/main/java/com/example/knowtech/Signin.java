@@ -37,7 +37,6 @@ public class Signin extends AppCompatActivity {
         signinBtn = findViewById(R.id.Log_Signin);
         email = findViewById(R.id.edit_email);
         password = findViewById(R.id.edit_password);
-        forgot = findViewById(R.id.forgotPassword);
         createAnAccount = findViewById(R.id.reg_signup);
 
         TextWatcher watcher = new TextWatcher() {
