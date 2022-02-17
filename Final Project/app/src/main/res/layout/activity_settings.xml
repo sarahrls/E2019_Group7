@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".settings">
 
+
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
@@ -68,6 +69,7 @@
 
     </LinearLayout>
 
+
     <ScrollView
         android:id="@+id/scrollView3"
         android:layout_width="387dp"
@@ -91,7 +93,7 @@
                 <RelativeLayout
                     android:layout_width="50dp"
                     android:layout_height="45dp"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/ic_round_person_outline_24"
                     android:backgroundTint="@color/purple_200">
@@ -121,7 +123,7 @@
                     android:id="@+id/textView28"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
                     android:layout_marginTop="5dp"
                     android:text="Profile Information"
                     android:textSize="18sp" />
@@ -129,7 +131,7 @@
                 <RelativeLayout
                     android:layout_width="30dp"
                     android:layout_height="25dp"
-                    android:layout_marginLeft="350dp"
+                    android:layout_marginStart="350dp"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/ic_round_arrow_forward_ios_24">
 
@@ -144,15 +146,15 @@
                     android:id="@+id/textView29"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
                     android:layout_marginTop="5dp"
                     android:text="Change password"
-                    android:textSize="18dp" />
+                    android:textSize="18sp" />
 
                 <RelativeLayout
                     android:layout_width="30dp"
                     android:layout_height="25dp"
-                    android:layout_marginLeft="350dp"
+                    android:layout_marginStart="350dp"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/ic_round_arrow_forward_ios_24">
 
@@ -167,7 +169,7 @@
                     android:id="@+id/textView30"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
                     android:layout_marginTop="5dp"
                     android:text="Privacy and Security"
                     android:textSize="18sp" />
@@ -175,7 +177,7 @@
                 <RelativeLayout
                     android:layout_width="30dp"
                     android:layout_height="25dp"
-                    android:layout_marginLeft="350dp"
+                    android:layout_marginStart="350dp"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/ic_round_arrow_forward_ios_24">
 
@@ -190,7 +192,7 @@
                     android:id="@+id/textView31"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
                     android:layout_marginTop="5dp"
                     android:text="Backup and Restore"
                     android:textSize="18sp" />
@@ -198,7 +200,7 @@
                 <RelativeLayout
                     android:layout_width="30dp"
                     android:layout_height="25dp"
-                    android:layout_marginLeft="350dp"
+                    android:layout_marginStart="350dp"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/ic_round_arrow_forward_ios_24">
 
@@ -214,7 +216,6 @@
 
                     android:layout_height="match_parent"
                     android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"
 
                     android:background="@drawable/ic_round_notifications_24"
@@ -231,7 +232,7 @@
                     android:layout_marginEnd="174dp"
                     android:layout_marginBottom="6dp"
                     android:text="Notifications"
-                    android:textSize="25dp"
+                    android:textSize="25sp"
                     android:textStyle="bold" />
             </RelativeLayout>
 
@@ -239,41 +240,23 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp">
 
-                <TextView
-                    android:id="@+id/textView33"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginTop="15dp"
-                    android:text="Silent mode"
-                    android:textSize="18sp" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-                <Switch
-                    android:id="@+id/switch1"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginLeft="335dp" />
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="50dp">
-
-                <TextView
-                    android:id="@+id/textView34"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="15dp"
-                    android:text="Vibrate"
-                    android:textSize="18sp" />
-
-                <Switch
-                    android:id="@+id/switch2"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginLeft="335dp" />
+                    <Switch
+                        android:id="@+id/switch1"
+                        android:layout_width="364dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="10dp"
+                        android:checked="true"
+                        android:text="Silent Mode"
+                        android:textOff="OFF"
+                        android:textOn="ON"
+                        android:textSize="18sp" />
+                </RelativeLayout>
 
             </androidx.cardview.widget.CardView>
 
@@ -281,21 +264,45 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp">
 
-                <TextView
-                    android:id="@+id/textView35"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="15dp"
-                    android:text="Do not disturb"
-                    android:textSize="18sp" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-                <Switch
-                    android:id="@+id/switch3"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginLeft="335dp" />
+                    <Switch
+                        android:id="@+id/switch2"
+                        android:layout_width="364dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="10dp"
+                        android:text="Vibrate"
+                        android:checked="true"
+                        android:textOff="OFF"
+                        android:textOn="ON"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
 
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Switch
+                        android:id="@+id/switch3"
+                        android:layout_width="364dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="10dp"
+                        android:text="Do not disturb"
+                        android:checked="true"
+                        android:textOff="OFF"
+                        android:textOn="ON"
+                        android:textSize="18sp" />
+                </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
             <RelativeLayout
@@ -305,7 +312,7 @@
                 <RelativeLayout
                     android:layout_width="50dp"
                     android:layout_height="45dp"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/ic_round_help_outline_24"
                     android:backgroundTint="@color/purple_200">
@@ -341,7 +348,7 @@
                 <RelativeLayout
                     android:layout_width="30dp"
                     android:layout_height="25dp"
-                    android:layout_marginLeft="350dp"
+                    android:layout_marginStart="350dp"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/ic_round_arrow_forward_ios_24">
 
@@ -356,7 +363,7 @@
                     android:id="@+id/textView38"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
                     android:layout_marginTop="5dp"
                     android:text="Terms of Use"
                     android:textSize="18sp" />
@@ -364,7 +371,7 @@
                 <RelativeLayout
                     android:layout_width="30dp"
                     android:layout_height="25dp"
-                    android:layout_marginLeft="350dp"
+                    android:layout_marginStart="350dp"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/ic_round_arrow_forward_ios_24">
 
@@ -402,7 +409,7 @@
                     android:id="@+id/textView40"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
                     android:layout_marginTop="5dp"
                     android:text="Code of Conduct"
                     android:textSize="18sp" />
@@ -419,6 +426,22 @@
 
         </LinearLayout>
     </ScrollView>
+
+
+    <TextView
+        android:id="@+id/Settings"
+        android:layout_width="166dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="228dp"
+        android:layout_marginBottom="58dp"
+        android:text="Settings"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

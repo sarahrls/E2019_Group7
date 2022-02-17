@@ -21,27 +21,43 @@ public class selectSecondYear extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_select_second_year, container, false);
     }
+
     /*
+
+
+
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+
         //Second Year 1st Sem
+
+
         CardView RoomCC106 = view.findViewById(R.id.RoomCC106_Card);
         CardView RoomSDF104 = view.findViewById(R.id.RoomSDF104_Card);
         CardView RoomAL102 = view.findViewById(R.id.RoomAL102_Card);
         CardView RoomNC101 = view.findViewById(R.id.RoomNC101_Card);
+
         //Second Year 2nd Sem
+
+
         CardView RoomAR101 = view.findViewById(R.id.RoomAR101_Card);
         CardView RoomOS101 = view.findViewById(R.id.RoomOS101_Card);
         CardView RoomPL101 = view.findViewById(R.id.RoomPL101_Card);
         CardView RoomHCI101 = view.findViewById(R.id.RoomHCI101_Card);
         CardView RoomAL103 = view.findViewById(R.id.RoomAL103_Card);
 
+
+
+
         RoomCC106.setOnClickListener(new selectSecondYear.Clik());
         RoomSDF104.setOnClickListener(new selectSecondYear.Clik());
         RoomAL102.setOnClickListener(new selectSecondYear.Clik());
         RoomNC101.setOnClickListener(new selectSecondYear.Clik());
+
+
+
 
         RoomAR101.setOnClickListener(new selectSecondYear.Clik());
         RoomOS101.setOnClickListener(new selectSecondYear.Clik());
@@ -89,11 +105,19 @@ public class selectSecondYear extends Fragment {
                     i = new Intent(v.getContext(), RoomHCI101.class);
                     startActivity(i);
                     break;
+
                 case R.id.RoomAL103_Card:_Card:
                 i = new Intent(v.getContext(), RoomAL103.class);
+                case R.id.RoomAL103_Card:
+                    i = new Intent(v.getContext(), RoomAL103.class);
+
                     startActivity(i);
                     break;
             }
         }
+
     }*/
+
+
+
 }

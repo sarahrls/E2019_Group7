@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     android:background="#fff"
     android:orientation="vertical"
     tools:context=".RoomAL103">
@@ -11,7 +14,10 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical">
+        android:layout_marginEnd="1dp"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.cardview.widget.CardView
             android:layout_width="66dp"
@@ -45,8 +51,8 @@
                 android:layout_width="71dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
-                android:layout_marginTop="5dp"
                 android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
                 android:layout_weight="1"
                 android:gravity="start|center_vertical"
                 android:text="AL103"
@@ -59,8 +65,8 @@
                 android:layout_width="288dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
-                android:layout_marginTop="25dp"
                 android:layout_marginLeft="15dp"
+                android:layout_marginTop="25dp"
                 android:layout_weight="1"
                 android:text="Logic Design"
                 android:textSize="20sp"
@@ -69,20 +75,8 @@
 
     </LinearLayout>
 
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/main_tab_layout"
-        android:layout_width="match_parent"
-        android:layout_height="?actionBarSize"
-        android:background="@color/white"
-        app:tabIndicatorColor="@color/teal_700"
-        app:tabInlineLabel="true"
-        app:tabSelectedTextColor="@color/teal_700"
-        app:tabTextAppearance="@style/TextAppearance.AppCompat.Small" />
-
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/main_view_pager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
 
 
-</LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

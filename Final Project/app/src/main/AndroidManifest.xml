@@ -13,16 +13,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.KnowTech">
-        <activity
-            android:name=".addpostCC102"
-            android:exported="false" />
+
         <activity
             android:name=".RoomSDF105"
             android:exported="false" />
         <activity
+
             android:name=".RoomHCI102"
             android:exported="false" />
         <activity
+
             android:name=".RoomELEC5"
             android:exported="false" />
         <activity
@@ -127,30 +127,11 @@
         <activity
             android:name=".PostDesign"
             android:exported="false" />
+
         <activity
-            android:name=".RoomDS102"
+            android:name=".customize_profile"
             android:exported="false" />
-        <activity
-            android:name=".RoomCC105"
-            android:exported="false" />
-        <activity
-            android:name=".RoomCC104"
-            android:exported="false" />
-        <activity
-            android:name=".RoomCC103"
-            android:exported="false" />
-        <activity
-            android:name=".RoomAL101"
-            android:exported="false" />
-        <activity
-            android:name=".RoomDS101"
-            android:exported="false" />
-        <activity
-            android:name=".RoomCC102"
-            android:exported="false" />
-        <activity
-            android:name=".RoomCC101"
-            android:exported="false" />
+
         <activity
             android:name=".Signup"
             android:exported="false" />
